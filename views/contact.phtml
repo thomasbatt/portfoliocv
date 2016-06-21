@@ -1,0 +1,50 @@
+<div id="contacter" class="wow fadeInUpBig modal-box">
+    <header> <a href="#" class="js-modal-close close">×</a>
+        <h3>CONTACT</h3>
+    </header>
+    <div class="modal-body">
+        <div class="entry ">
+        <div>
+            <strong><span class="titre-article">Un projet a nous soumettre?</span></strong>
+            <br /><br />N’hésitez pas à nous contacter par mail en remplissant le formulaire ci-dessous et nous vous répondrons le plus vite possible.
+            <br /><br />
+                <?php require('apps/errors.php'); ?>
+            <br />
+
+            <form method="post" id="form" class="form" action="contact" enctype="multipart/form-data" >
+                <div class="label label_name">
+                    <label for="name">Nom: <span class="required"></span></label>
+                </div>
+                <div class="input input_name">
+                    <input class="text" type="text" size="40" value="" name="name" id="name" />
+                </div>
+                <div class="label label_email">
+                    <label for="email">Adresse e-mail: <span class="required"></span></label>
+                </div>
+                <div class="input input_email">
+                    <input class="text" type="text" size="40" value="" name="email" id="email" />
+                </div>
+                <div class="label label_subject">
+                    <label for="subject">Sujet: <span class="required"></span></label>
+                </div>
+                <div class="input input_subject">
+                    <input class="text" type="text" size="40" value="" name="subject" id="subject" />
+                </div>
+                <div class="label label_message">
+                    <label for="message">Message: <span class="required"></span></label>
+                </div>
+                <div class="input input_message">
+                    <textarea rows="5" cols="30" name="message" id="message"></textarea>
+                </div>
+                <div class="checkbox checkbox_send_copy">
+                    <input type="checkbox" value="1" name="send_copy" id="send_copy" />
+                    <label for="send_copy">M'envoyer une copie</label>
+                </div>
+                <div class="input input_submit">
+                    <input type="hidden" value="send_mail" name="action"/>
+                    <input type="submit" value="Envoyer" class="submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

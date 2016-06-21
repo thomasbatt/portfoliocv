@@ -1,0 +1,11 @@
+# Ignore database configuration
+/config/config.php
+
+# NPM .gitignore configuration
+
+# Bower
+/assets/Vendor/*
+
+# Composer
+/vendor
+/vendor/._*
