@@ -1,5 +1,5 @@
 
-$('document').ready(function(){ 
+$('document').ready(function(){
 
 
     $("a.gallery-item").next("br").remove();
@@ -33,37 +33,34 @@ $('document').ready(function(){
         $('a[data-modal-id]').click(function(e) {
             e.preventDefault();
             $(".modal-box").css({
-                top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
+                top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() ,
                 left: ($(window).width() - $(".modal-box").outerWidth()) / 2
             });
         $("body").append(appendthis);
         $(".modal-overlay").fadeTo(500, 0.7);
-        //$(".js-modalbox").fadeIn(500);
             var modalBox = $(this).attr('data-modal-id');
             $('#'+modalBox).fadeIn($(this).data());
-        });  
-              
-      
+        });
+
+
         $(".js-modal-close, .modal-overlay").click(function() {
             $(".modal-box, .modal-overlay").fadeOut(500, function() {
                 $(".modal-overlay").remove();
 
             });
-         
+
         });
-         
+
         $(window).resize(function() {
             $(".modal-box").css({
-                top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
+                top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() ,
                 left: ($(window).width() - $(".modal-box").outerWidth()) / 2
             });
-        // console.log("height:"+$(window).height());
-        // console.log("width:"+$(window).width());
         });
-         
+
         $(window).resize();
 
-     
+
     });
 
     new WOW().init();

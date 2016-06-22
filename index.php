@@ -1,10 +1,5 @@
 <?php
 
-// var_dump($_GET);
-// var_dump($_POST);
-// var_dump($_SESSION);
-// exit;
-
 $error = '';
 spl_autoload_register(function($class)
 {
@@ -29,22 +24,20 @@ if (isset($_SESSION['id']))
 {
 	$page = 'accueil';
 	$access = [ 'accueil'];
-	// $ajax = [
-	// 	'listMessage'=>'contollers/listMessage.php',
-	// 	'footer'=>'contollers/footer.php'
-	// ];
 }
 else
 {
 	$page = 'accueil';
 	$access = [ 'accueil' , 'profil', 'competences' , 'projets' , 'contacter' ];
-	// $ajax = [];
 }
 if (isset($_GET['page']))
 {
 	if (in_array($_GET['page'], $access ))
+	{
 		$page = $_GET['page'];
-	else if (isset($ajax[$_GET['page']])) {
+	}
+	else if (isset($ajax[$_GET['page']]))
+	{
 		$page = $ajax[$_GET['page']];
 	}
 	else
@@ -53,15 +46,17 @@ if (isset($_GET['page']))
 		exit;
 	}
 }
-
-for($index=0;$index<sizeof($access);$index++){
+$count = sizeof($access);
+for($index = 0; $index < $count; $index++)
+{
 	$active_page[$access[$index]] = '';
 	$display_page[$access[$index]] = 'display-none';
 }
 $active_page[$page] = 'active';
 $display_page[$page] = 'display-block';
 
-if($page == $access[0]){
+if($page == $access[0])
+{
 	$active_page[$access[1]] = 'active';
 	$display_page[$access[1]] = 'display-block';
 }
@@ -75,10 +70,10 @@ $traitement_action = [
 	'send_mail' => 'Mail',
 ];
 
-if (isset($_POST['action'])) 
+if (isset($_POST['action']))
 {
 	$action = $_POST['action'];
-	if (isset($traitement_action[$action])) 
+	if (isset($traitement_action[$action]))
 	{
 		$value = $traitement_action[$action];
 		require('apps/traitement'.$value.'.php');
@@ -86,8 +81,10 @@ if (isset($_POST['action']))
 }
 
 if (!isset($_GET['ajax']))
+{
 	require('apps/skel.php');
+}
 else
+{
 	require($page);
-
-?>
+}
