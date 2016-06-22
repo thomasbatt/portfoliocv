@@ -6,12 +6,16 @@
  * Si vous êtes sous mamp il me semble qu'il faut mettre 8000 ou un truc dans le genre
  * Sous la chose, aucune idée et je ne veut même pas le savoir ! LOL !
  */
+ 
+ 
+//-------------------- 3WA HOME --------------------
+
 $config = [
-  'dbPort' => '3306',
-  'dbName' => 'YourDatabase',
-  'dbHost' => 'localhost',
-  'dbUser' => 'YourUser',
-  'dbPassword' => 'YourPassword'
+	'host' => 'localhost',
+	'port' => '3306',
+	'login' => 'portfolio',
+	'password' => 'portfolio',
+	'bdd' => 'portfolio',
 ];
 
 ?>
