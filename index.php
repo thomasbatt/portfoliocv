@@ -27,8 +27,8 @@ catch (PDOException $e)
 
 if (isset($_SESSION['id']))
 {
-	$page = 'accueil';
-	$access = [ 'accueil'];
+	$page = 'content';
+	$access = [ 'content'];
 	// $ajax = [
 	// 	'listMessage'=>'contollers/listMessage.php',
 	// 	'footer'=>'contollers/footer.php'
@@ -36,8 +36,8 @@ if (isset($_SESSION['id']))
 }
 else
 {
-	$page = 'accueil';
-	$access = [ 'accueil' , 'profil', 'competences' , 'projets' , 'contacter' ];
+	$page = 'content';
+	$access = [ 'content' , 'contact' ];
 	// $ajax = [];
 }
 if (isset($_GET['page']))
