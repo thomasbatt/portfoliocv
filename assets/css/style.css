@@ -1208,6 +1208,8 @@ pre {
 }
 
 
+
+
 /*-----------------------------MODAL CONTACT-------------------------------------*/
 
 .v-center {
@@ -1316,4 +1318,12 @@ a.close:hover {
   -webkit-transition: color 1s ease;
   -moz-transition: color 1s ease;
   transition: color 1s ease;
+}
+
+.display-block{
+    display: block !important;
+}
+
+.display-none{
+    display: none !important;
 }

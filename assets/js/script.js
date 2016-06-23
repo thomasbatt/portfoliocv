@@ -350,7 +350,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-modal" offset="120" data-modal-id="contacter">contacter</a> </li></ul>')
+        t.put("./interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-modal" offset="120" data-modal-id="contacter">contact</a> </li></ul>')
     }])
 }(),
 function(t) {

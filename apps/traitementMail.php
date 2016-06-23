@@ -23,8 +23,8 @@ if (isset($_POST['action']))
 				$mail->setCorps();
 				$mail->sendMail('thomasbatt@gmail.com');
 
-				var_dump($mail);
-				// header('Location: contact');
+				// var_dump($mail);
+				header('Location: sendmailsuccess');
 				exit;
 			}
 			catch (Exception $e)
