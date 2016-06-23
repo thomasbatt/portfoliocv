@@ -1321,9 +1321,9 @@ a.close:hover {
 }
 
 .display-block{
-    display: block !important;
+    display: block;
 }
 
 .display-none{
-    display: none !important;
+    display: none;
 }
