@@ -13,7 +13,8 @@ spl_autoload_register(function($class)
 
 session_start();
 
-require('./config/config.php');
+require('./config/dbConfig.php');
+require('./config/globalConfig.php');
 
 try
 {

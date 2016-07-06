@@ -14,16 +14,14 @@ if (isset($_POST['action']))
 		{
 			try
 			{
-				$mail = new Mail();
-				$mail->setName($_POST['name']);
-				$mail->setEmail($_POST['email']);
-				$mail->setSubject($_POST['subject']);
-				$mail->setMessage($_POST['message']);
+				$MailManager = new MailManager($db);
+				$mail = $MailManager->create($_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message']);
+				
 				$mail->setEntete();
 				$mail->setCorps();
 				$mail->sendMail('thomasbatt@gmail.com');
-
 				// var_dump($mail);
+
 				header('Location: sendmailsuccess');
 				exit;
 			}

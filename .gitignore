@@ -1,5 +1,6 @@
 # Ignore database configuration
-/config/config.php
+/config/dbConfig.php
+/config/globalConfig.php
 
 # NPM .gitignore configuration
 

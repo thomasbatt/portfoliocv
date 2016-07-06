@@ -34,6 +34,9 @@ class Mail
 	public function getEntete(){
 		return $this->entete;
 	}
+	public function getMessage(){
+		return $this->message;
+	}
 
 	public function getCorps() {
 		return $this->corps;
@@ -45,7 +48,7 @@ class Mail
 			$this->name = $name;
 		}
 		else
-			throw new Exception("erreur name");
+			throw new Exception("Veuillez saisir un nom");
 	}
 
 	public function setEmail($email) {
@@ -53,21 +56,21 @@ class Mail
 			$this->email = $email;
 		}
 		else
-			throw new Exception("erreur email");
+			throw new Exception("Veuillez saisir un email");
 	}
 	public function setSubject($subject) {
 		if (strlen($subject) > 1 && strlen($subject) < 31) {
 			$this->subject = $subject;
 		}
 		else
-			throw new Exception("erreur subject");
+			throw new Exception("Veuillez saisir un sujet");
 	}
 	public function setMessage($message) {
 		if (strlen($message) > 1 && strlen($message) < 1023) {
 			$this->message = $message;
 		}
 		else
-			throw new Exception("erreur message");
+			throw new Exception("Veuillez saisir un message");
 	}
 	// --------------------Liste des méthodes "autres"---------------------
 
@@ -94,7 +97,7 @@ class Mail
 			// préparation du corps du mail
 			$this->corps  = "Message de : ".$this->name."\n";
 			$this->corps .= "Adresse : ".$this->email."\n";
-			$this->corps .= "Ses centres d'intérêts : ".$this->subject."\n\n\n";
+			$this->corps .= "Objet : ".$this->subject."\n\n\n";
 			$this->corps .= $this->message;
 		}
 		else
