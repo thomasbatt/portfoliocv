@@ -1,6 +1,4 @@
 <?php
-// PascalCase pour le nom des classes
-// camelCase pour le nom des variables
 class Mail
 {
 // ------------------------ Déclarer les propriétés-----------------------
@@ -17,7 +15,7 @@ class Mail
 	// --------------------Liste des getters------------------------------
 
 	public function getId() {
-		return $this->id; // On récupère la propriété id_mail de $this
+		return $this->id;
 	}
 
 	public function getName() {
@@ -107,27 +105,9 @@ class Mail
 	public function sendMail($destinataire)
 	{
 		if ( !mail( $destinataire,$this->subject,$this->corps,$this->entete ) )
-			throw new Exception("Une erreur est survenue lors de l'envoi du mail");
+			throw new Exception("Une erreur est survenue lors de l'envoi du mail à ".$destinataire );
 	}
 
-	// --------------------verifier password ?---------------------
-
 }
-
-// Tout ça n'a rien a foutre dans le fichier User.class.php, mais c'est plus pratique pour apprendre
-
-// ------------------------------------------------------------------------
-// --------------------On va INSTANCIER notre classe User------------------
-// --------------------$user => objet--------------------------------------
-// --------------------User => classe--------------------------------------
-// --------------------Un objet est une instance d'une classe--------------
-// ------------------------------------------------------------------------
-
-// $user = new User();
-// $user->setLogin("toto");
-// $user->initPassword("password", "password");
-
-// var_dump($user);
-
 
 ?>

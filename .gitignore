@@ -1,4 +1,4 @@
-# Ignore database configuration
+# Ignore configuration
 /config/dbConfig.php
 /config/globalConfig.php
 

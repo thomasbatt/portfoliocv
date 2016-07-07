@@ -14,12 +14,25 @@ if (isset($_POST['action']))
 		{
 			try
 			{
+		        $mail = new Mail();
+
+				$fields = ['name','email','subject','message'];
+		        foreach($fields as $field){
+		            $setter = "set".ucfirst($field);
+		            $mail->$setter($_POST[$field]);
+		        }
+
 				$MailManager = new MailManager($db);
-				$mail = $MailManager->create($_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message']);
-				
+				$mail = $MailManager->create($mail);
+
 				$mail->setEntete();
 				$mail->setCorps();
-				$mail->sendMail('thomasbatt@gmail.com');
+				$mail->sendMail(MAIL_ADMIN);
+
+				if( $_POST['send_copy'] == '1'){
+					$mail->sendMail( $mail->getEmail() );
+				}
+
 				// var_dump($mail);
 
 				header('Location: sendmailsuccess');
@@ -27,7 +40,9 @@ if (isset($_POST['action']))
 			}
 			catch (Exception $e)
 			{
+
 				$error = $e->getMessage();
+				// var_dump($e);
 			}
 		}
 	}
