@@ -1,6 +1,7 @@
 # Ignore configuration
 /config/dbConfig.php
 /config/globalConfig.php
+#/config/thomasbatt.sql
 
 # NPM .gitignore configuration
 
