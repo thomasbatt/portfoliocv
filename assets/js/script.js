@@ -1,6 +1,25 @@
 
 $('document').ready(function(){ 
 
+    $('.js_submit_contact').click(function(evenement)
+    {
+        evenement.preventDefault();
+        var name = $(this).parents('form').find('[name="name"]').val();
+        var email = $(this).parents('form').find('[name="email"]').val();
+        var subject = $(this).parents('form').find('[name="subject"]').val();
+        var message = $(this).parents('form').find('[name="message"]').val();
+        var send_copy = $(this).parents('form').find('[name="send_copy"]').val();
+
+        $.post('index.php?ajax&page=message', {name:name,email:email,subject:subject,message:message,action:'send_mail'}, function(res)
+        {
+            // alert(res);
+            $('.js_message').replaceWith(res);
+            // $.get('index.php?ajax&page=errors', function(html)
+            // {
+                // alert(html);
+            // });
+        });
+    });
 
     $("a.gallery-item").next("br").remove();
 

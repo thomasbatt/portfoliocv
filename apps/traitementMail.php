@@ -29,20 +29,18 @@ if (isset($_POST['action']))
 				$mail->setCorps();
 				$mail->sendMail(MAIL_ADMIN);
 
-				if( $_POST['send_copy'] == '1'){
+				if( isset( $_POST['send_copy']) && $_POST['send_copy'] == '1'){
 					$mail->sendMail( $mail->getEmail() );
 				}
 
-				// var_dump($mail);
-
-				header('Location: sendmailsuccess');
+				header('Location: index.php?ajax&page=sendmailsuccess');
 				exit;
 			}
 			catch (Exception $e)
 			{
-
 				$error = $e->getMessage();
-				// var_dump($e);
+				// var_dump($error);
+				// echo $error;
 			}
 		}
 	}

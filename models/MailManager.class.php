@@ -66,8 +66,9 @@ class MailManager
             else{
                 throw new Exception('Last insert error');
             }
-        }else{
-            throw new Exception('Db error');
+        }
+        else{
+            throw new Exception('DataBase error');
         }
 
 	}

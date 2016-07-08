@@ -6,15 +6,24 @@
 // exit;
 
 $error = '';
+
+// ________ AUTOLOADER ________
+
 spl_autoload_register(function($class)
 {
     require('models/'.$class.'.class.php');
 });
 
-session_start();
+// ________ SESSION ________
+
+// session_start();
+
+// ________ CONFIGURATION ________
 
 require('./config/dbConfig.php');
 require('./config/globalConfig.php');
+
+// ________ DATABASE ________
 
 try
 {
@@ -26,18 +35,20 @@ catch (PDOException $e)
 	die();
 }
 
+// ________ HUB ________
+
 $page = 'content';
 $access = [ 'content', 'contact', 'sendmailsuccess'];
-// $ajax = [
-// 	'listMessage'=>'contollers/listMessage.php',
-// 	'footer'=>'contollers/footer.php'
-// ];
+$ajax = [
+	'message'=>'apps/contact_message.php',
+	'sendmailsuccess'=>'apps/sendmailsuccess.php'
+];
 
 if (isset($_GET['page']))
 {
-	if (in_array($_GET['page'], $access ))
+	if ( in_array($_GET['page'], $access) && !isset($_GET['ajax'])  )
 		$page = $_GET['page'];
-	else if (isset($ajax[$_GET['page']])) {
+	else if ( isset($ajax[$_GET['page']]) ) {
 		$page = $ajax[$_GET['page']];
 	}
 	else
@@ -51,8 +62,9 @@ for($index=0;$index<sizeof($access);$index++){
 	$display_page[$access[$index]] = 'display-none';
 }
 $display_page[$page] = 'display-block';
-$page = $access[0];
 
+if (!isset($_GET['ajax']))
+	$page = $access[0];
 
 $traitement_action = [
 	'send_mail' => 'Mail',

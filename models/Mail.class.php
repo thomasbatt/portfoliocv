@@ -50,11 +50,11 @@ class Mail
 	}
 
 	public function setEmail($email) {
-		if (strlen($email) > 1 && strlen($email) < 31) {
+		if (strlen($email) > 1 && strlen($email) < 31 && filter_var($email, FILTER_VALIDATE_EMAIL) ) {
 			$this->email = $email;
 		}
 		else
-			throw new Exception("Veuillez saisir un email");
+			throw new Exception("Adresse email invalide");
 	}
 	public function setSubject($subject) {
 		if (strlen($subject) > 1 && strlen($subject) < 31) {
