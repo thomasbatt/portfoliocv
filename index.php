@@ -5,6 +5,13 @@
 // var_dump($_SESSION);
 // exit;
 
+// ________ OVH-DEBUG ________
+
+// ini_set('display_errors',1);
+
+// ________ SESSION ________
+
+// session_start();
 
 // ________ AUTOLOADER ________
 
@@ -12,10 +19,6 @@ spl_autoload_register(function($class)
 {
     require('models/'.$class.'.class.php');
 });
-
-// ________ SESSION ________
-
-// session_start();
 
 // ________ CONFIGURATION ________
 

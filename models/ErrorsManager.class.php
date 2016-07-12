@@ -82,7 +82,6 @@ class ErrorsManager
             while( $item = $res->fetchObject($this->getClass()) ) {
                 $list[] = $item;
             }
-
             if(!empty($list)){
                 return $list;
             }
@@ -91,7 +90,7 @@ class ErrorsManager
             }
         }
         else{
-            throw new Exception('Erreur interne');
+            throw new Exception('DataBase error');
         }
 	}
 

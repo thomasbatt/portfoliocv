@@ -56,7 +56,7 @@ class Errors
 	// --------------------Liste des méthodes "autres"---------------------
 
 	private function setNow()	{
-		if ( time()- strtotime($this->getCreate_date()) < 1 && !empty($this->create_date)) {
+		if ( time()- strtotime($this->getCreate_date()) < 3 && !empty($this->create_date)) {
 			$this->isNow = true;
 		}
 		else

@@ -10,7 +10,7 @@ $('document').ready(function(){
         var message = $(this).parents('form').find('[name="message"]').val();
         var send_copy = $(this).parents('form').find('[name="send_copy"]').val();
 
-        $.post('index.php', {name:name,email:email,subject:subject,message:message,action:'send_mail'}, function(){
+        $.post('index.php', {name:name,email:email,subject:subject,message:message,send_copy:send_copy,action:'send_mail'}, function(){
             $.get('index.php?ajax&page=errors', function(errors){
                 if(errors == ""){
                     var url = window.location.href.split('/');
