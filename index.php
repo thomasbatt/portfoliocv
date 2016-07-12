@@ -5,7 +5,6 @@
 // var_dump($_SESSION);
 // exit;
 
-$error = '';
 
 // ________ AUTOLOADER ________
 
@@ -41,7 +40,7 @@ $page = 'content';
 $access = [ 'content', 'contact', 'sendmailsuccess'];
 $ajax = [
 	'message'=>'apps/contact_message.php',
-	'sendmailsuccess'=>'apps/sendmailsuccess.php'
+	'errors'=>'apps/errors.php',
 ];
 
 if (isset($_GET['page']))

@@ -1,5 +1,5 @@
 <?php
-class MailManager
+class ErrorsManager
 {
 	// Déclarer les propriétés
 	private $db;
@@ -32,7 +32,7 @@ class MailManager
                 return $item;
             }
             else{
-                throw new Exception('No mail with this '.$field);
+                throw new Exception('No Error with this '.$field);
             }
         }else{
             throw new Exception("Erreur interne");
@@ -43,13 +43,13 @@ class MailManager
         return $this->getBy("id", $id);
     }
 
-	public function create($mail)
+	public function create($Error)
 	{
-		$fields = ['name','email','subject','message'];
+		$fields = ['type','message'];
         $values = [];
         foreach($fields as $field){
             $getter = "get".ucfirst($field);
-            $values[$field] = $this->db->quote( $mail->$getter() );
+            $values[$field] = $this->db->quote( $Error->$getter() );
         }
 
         $values = implode(", ", $values);
@@ -76,11 +76,10 @@ class MailManager
  	public function getAll($limit)
  	{
  		$limit = intval($limit);
- 		$query = 'SELECT * FROM '.$this->getTable().' ORDER BY create_date DESC LIMIT '.$limit ;
+ 		$query = "SELECT * FROM ".$this->getTable()." ORDER BY create_date DESC LIMIT ".$limit ;
  		$res = $this->db->query($query);
- 		
         if($res) {
-            while($item = $res->fetchObject($this->getClass(),[$this->db]) ) {
+            while( $item = $res->fetchObject($this->getClass()) ) {
                 $list[] = $item;
             }
 
@@ -88,7 +87,7 @@ class MailManager
                 return $list;
             }
             else{
-                throw new Exception('No Mail found');
+                throw new Exception('No Error found');
             }
         }
         else{

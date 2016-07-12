@@ -10,14 +10,22 @@ $('document').ready(function(){
         var message = $(this).parents('form').find('[name="message"]').val();
         var send_copy = $(this).parents('form').find('[name="send_copy"]').val();
 
-        $.post('index.php?ajax&page=message', {name:name,email:email,subject:subject,message:message,action:'send_mail'}, function(res)
-        {
-            // alert(res);
-            $('.js_message').replaceWith(res);
-            // $.get('index.php?ajax&page=errors', function(html)
-            // {
-                // alert(html);
-            // });
+        $.post('index.php', {name:name,email:email,subject:subject,message:message,action:'send_mail'}, function(){
+            $.get('index.php?ajax&page=errors', function(errors){
+                if(errors == ""){
+                    var url = window.location.href.split('/');
+                    var newUrl = "";
+                    for (i = 0; i < url.length-1; i++) {
+                      newUrl += url[i]+"/";
+                    }
+                    newUrl += 'sendmailsuccess';
+                    window.location.href = newUrl ;
+                }else{
+                    $.get('index.php?ajax&page=message', function(message){
+                        $('.js_message').replaceWith(message);
+                    });
+                }
+            });
         });
     });
 

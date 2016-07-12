@@ -11,7 +11,7 @@ if (isset($_POST['action']))
 	if ($action == 'send_mail')
 	{
 		if (isset( $_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message'] ))
-		{
+		{			
 			try
 			{
 		        $mail = new Mail();
@@ -33,13 +33,19 @@ if (isset($_POST['action']))
 					$mail->sendMail( $mail->getEmail() );
 				}
 
-				header('Location: index.php?ajax&page=sendmailsuccess');
+				// echo "success";
+				header('Location: sendmailsuccess');
 				exit;
 			}
 			catch (Exception $e)
 			{
-				$error = $e->getMessage();
-				// var_dump($error);
+		        $error = new Errors();
+		        $error->setType('Mail');
+		        $error->setMessage( $e->getMessage() );
+				$errorManager = new ErrorsManager($db);
+				$error = $errorManager->create($error);
+
+				// $error = $e->getMessage();
 				// echo $error;
 			}
 		}
