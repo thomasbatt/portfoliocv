@@ -45,7 +45,7 @@ class ErrorsManager
 
 	public function create($Error)
 	{
-		$fields = ['type','message'];
+		$fields = ['type','position','message'];
         $values = [];
         foreach($fields as $field){
             $getter = "get".ucfirst($field);

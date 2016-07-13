@@ -46,7 +46,7 @@ class Mail
 			$this->name = $name;
 		}
 		else
-			throw new Exception("Veuillez saisir un nom");
+			throw new Exception("Veuillez saisir un nom",1);
 	}
 
 	public function setEmail($email) {
@@ -54,21 +54,21 @@ class Mail
 			$this->email = $email;
 		}
 		else
-			throw new Exception("Adresse email invalide");
+			throw new Exception("Adresse email invalide",2);
 	}
 	public function setSubject($subject) {
 		if (strlen($subject) > 1 && strlen($subject) < 31) {
 			$this->subject = $subject;
 		}
 		else
-			throw new Exception("Veuillez saisir un sujet");
+			throw new Exception("Veuillez saisir un sujet",3);
 	}
 	public function setMessage($message) {
 		if (strlen($message) > 1 && strlen($message) < 1023) {
 			$this->message = $message;
 		}
 		else
-			throw new Exception("Veuillez saisir un message");
+			throw new Exception("Veuillez saisir un message",4);
 	}
 	// --------------------Liste des méthodes "autres"---------------------
 

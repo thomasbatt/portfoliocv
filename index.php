@@ -11,7 +11,7 @@
 
 // ________ SESSION ________
 
-// session_start();
+session_start();
 
 // ________ AUTOLOADER ________
 
@@ -42,8 +42,8 @@ catch (PDOException $e)
 $page = 'content';
 $access = [ 'content', 'contact', 'sendmailsuccess'];
 $ajax = [
-	'message'=>'apps/contact_message.php',
-	'errors'=>'apps/errors.php',
+	'contact'=>'apps/contact_error.php',
+	'error'=>'apps/error.php',
 ];
 
 if (isset($_GET['page']))
@@ -60,18 +60,20 @@ if (isset($_GET['page']))
 	}
 }
 
+// ________ ROUTAGE ONEPAGE ________
+
 for($index=0;$index<sizeof($access);$index++){
 	$display_page[$access[$index]] = 'display-none';
 }
 $display_page[$page] = 'display-block';
-
 if (!isset($_GET['ajax']))
 	$page = $access[0];
+
+// ________ TRAITEMENT ________
 
 $traitement_action = [
 	'send_mail' => 'Mail',
 ];
-
 if (isset($_POST['action'])) 
 {
 	$action = $_POST['action'];
@@ -81,6 +83,7 @@ if (isset($_POST['action']))
 		require('apps/traitement'.$value.'.php');
 	}
 }
+
 
 if (!isset($_GET['ajax']))
 	require('apps/skel.php');

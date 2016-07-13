@@ -1,40 +1,13 @@
-<div id="contacter" class="wow fadeInUpBig modal-box <?=htmlentities($display_page['contact'])?> js_contact"">
+<div id="contacter" class="wow fadeInUpBig modal-box <?=htmlentities($display_page['contact'])?> ">
     <header> <a href="#" class="js-modal-close close">×</a>
         <h3>Un projet a me soumettre?</h3>
     </header>
     <div class="modal-body">
         <!-- <strong><span class="titre-article">Un projet a me soumettre?</span></strong> -->
-        <?php require('apps/contact_message.php') ?>
-
+        Contactez moi par mail en remplissant le formulaire ci-dessous.
+        <br/>
         <form method="post" id="form" class="form" action="contact" enctype="multipart/form-data" >
-            <div class="label label_name">
-                <label for="name">Nom: <span class="required"></span></label>
-            </div>
-            <div class="input input_name">
-                <input class="text" type="text" size="40" value="" name="name" id="name" />
-            </div>
-            <div class="label label_email">
-                <label for="email">Adresse e-mail: <span class="required"></span></label>
-            </div>
-            <div class="input input_email">
-                <input class="text" type="text" size="40" value="" name="email" id="email" />
-            </div>
-            <div class="label label_subject">
-                <label for="subject">Sujet: <span class="required"></span></label>
-            </div>
-            <div class="input input_subject">
-                <input class="text" type="text" size="40" value="" name="subject" id="subject" />
-            </div>
-            <div class="label label_message">
-                <label for="message">Message: <span class="required"></span></label>
-            </div>
-            <div class="input input_message">
-                <textarea rows="5" cols="30" name="message" id="message"></textarea>
-            </div>
-            <div class="checkbox checkbox_send_copy">
-                <input type="checkbox" value="1" name="send_copy" id="send_copy" />
-                <label for="send_copy">M'envoyer une copie</label>
-            </div>
+            <?php require('views/contact_error.phtml') ?>
             <div class="input input_submit js_submit_contact">
                 <input type="hidden" value="send_mail" name="action"/>
                 <input type="submit" value="Envoyer" class="submit" />

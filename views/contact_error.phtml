@@ -1,0 +1,38 @@
+<div class="js-contact-error">
+    <!-- Contactez moi par mail en remplissant le formulaire ci-dessous. -->
+    <!-- <br/> -->
+    <?php $pos='0'; require('apps/error.php'); ?>
+    <!-- <br/> -->
+    <div class="label label_name">
+        <label for="name">Nom: <span class="required"></span></label>
+    </div>
+    <div class="input input_name">
+        <input class="text" type="text" size="40" value="<?=htmlentities($_SESSION['name'])?>" name="name" id="name" />
+        <?php $pos='1'; require('apps/error.php') ?>
+    </div>
+    <div class="label label_email">
+        <label for="email">Adresse e-mail: <span class="required"></span></label>
+    </div>
+    <div class="input input_email">
+        <input class="text" type="text" size="40" value="<?=htmlentities($_SESSION['email'])?>" name="email" id="email" />
+        <?php $pos='2'; require('apps/error.php') ?>
+    </div>
+    <div class="label label_subject">
+        <label for="subject">Sujet: <span class="required"></span></label>
+    </div>
+    <div class="input input_subject">
+        <input class="text" type="text" size="40" value="<?=htmlentities($_SESSION['subject'])?>" name="subject" id="subject" />
+        <?php $pos='3'; require('apps/error.php') ?>
+    </div>
+    <div class="label label_message">
+        <label for="message">Message: <span class="required"></span></label>
+    </div>
+    <div class="input input_message">
+        <textarea rows="5" cols="30" name="message" id="message"><?=htmlentities($_SESSION['message'])?></textarea>
+        <?php $pos='4'; require('apps/error.php') ?>
+    </div>
+    <div class="checkbox checkbox_send_copy">
+        <input type="checkbox" value="1" name="send_copy" id="send_copy" />
+        <label for="send_copy">M'envoyer une copie</label>
+    </div>
+</div>

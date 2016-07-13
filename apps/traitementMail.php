@@ -12,6 +12,7 @@ if (isset($_POST['action']))
 	{
 		if (isset( $_POST['name'],$_POST['email'],$_POST['subject'],$_POST['message'] ))
 		{			
+		    $_SESSION = $_POST;
 			try{
 		        $mail = new Mail();
 				$fields = ['name','email','subject','message'];
@@ -30,16 +31,21 @@ if (isset($_POST['action']))
 					$mail->sendMail( $mail->getEmail() );
 					// echo 'send_copy';
 				}
+				session_destroy();
+				$_SESSION = array();
 				header('Location: sendmailsuccess');
 				exit;
 			}
 			catch (Exception $e){
-				$input_error = $e->getMessage();
+				$message_error = $e->getMessage();
+				$position_error = $e->getCode();
+
 			}
 			try{
 		        $error = new Errors();
 		        $error->setType('Mail');
-		        $error->setMessage( $input_error );
+		        $error->setMessage( $message_error );
+		        $error->setPosition( $position_error );
 				$errorManager = new ErrorsManager($db);
 				$error = $errorManager->create($error);
 			}

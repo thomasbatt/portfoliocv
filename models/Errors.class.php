@@ -4,6 +4,7 @@ class Errors
 // ------------------------ Déclarer les propriétés-----------------------
 	private $id;
 	private $type;
+	private $position;
 	private $message;
 	private $create_date;
 	private $isNow;
@@ -18,6 +19,10 @@ class Errors
 
 	public function getType() {
 		return $this->type;
+	}
+
+	public function getPosition() {
+		return $this->position;
 	}
 
 	public function getMessage() {
@@ -43,6 +48,14 @@ class Errors
 		}
 		else
 			throw new Exception("Type d'erreur inconnue");
+	}
+
+	public function setPosition($position) {
+		if ($position > 0 && $position < 5) {
+			$this->position = $position;
+		}
+		else
+			throw new Exception("Position d'erreur impossible");
 	}
 
 	public function setMessage($message) {

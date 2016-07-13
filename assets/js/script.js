@@ -11,8 +11,8 @@ $('document').ready(function(){
         var send_copy = $(this).parents('form').find('[name="send_copy"]').val();
 
         $.post('index.php', {name:name,email:email,subject:subject,message:message,send_copy:send_copy,action:'send_mail'}, function(){
-            $.get('index.php?ajax&page=errors', function(errors){
-                if(errors == ""){
+            $.get('index.php?ajax&page=error', function(error){
+                if(error == ""){
                     var url = window.location.href.split('/');
                     var newUrl = "";
                     for (i = 0; i < url.length-1; i++) {
@@ -21,8 +21,8 @@ $('document').ready(function(){
                     newUrl += 'sendmailsuccess';
                     window.location.href = newUrl ;
                 }else{
-                    $.get('index.php?ajax&page=message', function(message){
-                        $('.js_message').replaceWith(message);
+                    $.get('index.php?ajax&page=contact', function(message){
+                        $('.js-contact-error').replaceWith(message);
                     });
                 }
             });
