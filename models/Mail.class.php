@@ -50,9 +50,10 @@ class Mail
 	}
 
 	public function setEmail($email) {
-		if (strlen($email) > 1 && strlen($email) < 31 && filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+		if (strlen($email) > 1 && strlen($email) < 31 && filter_var($email, FILTER_VALIDATE_EMAIL)) 
 			$this->email = $email;
-		}
+		else if (strlen($email) < 1)
+			throw new Exception("Veuillez saisir un email",2);
 		else
 			throw new Exception("Adresse email invalide",2);
 	}
@@ -64,11 +65,14 @@ class Mail
 			throw new Exception("Veuillez saisir un sujet",3);
 	}
 	public function setMessage($message) {
-		if (strlen($message) > 1 && strlen($message) < 1023) {
+		if (strlen($message) > 50 && strlen($message) < 1023)
 			$this->message = $message;
-		}
-		else
+		else if (strlen($message) < 1)
 			throw new Exception("Veuillez saisir un message",4);
+		else if (strlen($message) < 50)
+			throw new Exception("Veuillez saisir un message de plus de 50 caracteres",4);
+		else
+			throw new Exception("Veuillez saisir un message de moins de 1000 caracteres",4);
 	}
 	// --------------------Liste des méthodes "autres"---------------------
 

@@ -5,6 +5,8 @@
 // var_dump($_SESSION);
 // exit;
 
+// $pos='0';
+
 // ________ OVH-DEBUG ________
 
 // ini_set('display_errors',1);

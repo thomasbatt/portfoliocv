@@ -8,6 +8,7 @@ class Errors
 	private $message;
 	private $create_date;
 	private $isNow;
+	private $isPosition = true;
 	
 // ------------------------Déclarer les méthodes--------------------------
 
@@ -34,8 +35,12 @@ class Errors
 	}
 
 	public function isNow() { // Un getter d'un booleen transforme le get en is
-		$this->setNow();
+		$this->setIsNow();
 		return $this->isNow;
+	}
+
+	public function isPosition() {
+		return $this->isPosition;
 	}
 
 
@@ -68,13 +73,17 @@ class Errors
 
 	// --------------------Liste des méthodes "autres"---------------------
 
-	private function setNow()	{
+	private function setIsNow()	{
 		if ( time()- strtotime($this->getCreate_date()) < 3 && !empty($this->create_date)) {
 			$this->isNow = true;
 		}
 		else
 			$this->isNow = false;
+	}
 
+	public function setIsPosition($position){
+		if ( $this->position != $position )
+			$this->isPosition = false;
 	}
 
 }
