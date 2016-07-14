@@ -29,7 +29,6 @@ if (isset($_POST['action']))
 
 				if( isset( $_POST['send_copy'] ) && $_POST['send_copy'] == '1'){
 					$mail->sendMail( $mail->getEmail() );
-					// echo 'send_copy';
 				}
 				session_destroy();
 				$_SESSION = array();
@@ -39,7 +38,6 @@ if (isset($_POST['action']))
 			catch (Exception $e){
 				$message_error = $e->getMessage();
 				$position_error = $e->getCode();
-
 			}
 			try{
 		        $error = new Errors();
@@ -50,9 +48,7 @@ if (isset($_POST['action']))
 				$error = $errorManager->create($error);
 			}
 			catch (Exception $e){
-				$error = new Errors;
-				$error->setType('Errors');
-				$error->setMessage( $e->getMessage() );
+				$input_error['traitement'] = $e->getMessage();
 			}
 		}
 	}

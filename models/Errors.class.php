@@ -74,19 +74,19 @@ class Errors
 	// --------------------Liste des méthodes "autres"---------------------
 
 	private function setIsNow()	{
-		if ( time()- strtotime($this->getCreate_date()) > 3 ) {
+		if ( time()- strtotime($this->getCreate_date()) > 3 && !empty($this->create_date) ) {
 			$this->isNow = false;
 		}
-		if ( empty($this->create_date) )
-			throw new Exception("Erreur interne");
+		else if ( empty($this->create_date) )
+			throw new Exception("create_date Error abs");
 	}
 
 	public function setIsPosition($position){
-		if ( $this->position != $position ){
+		if ( $this->position != $position && !empty($this->position && $position != '0' ) ){
 			$this->isPosition = false;
 		}
-		if ( empty($this->position) )
-			throw new Exception("Erreur interne");
+		else if ( empty($this->position) )
+			throw new Exception("position Error abs");
 	}
 
 }

@@ -86,7 +86,7 @@ class ErrorsManager
                 return $list;
             }
             else{
-                throw new Exception('No Error found');
+                throw new Exception('No DB entry found');
             }
         }
         else{

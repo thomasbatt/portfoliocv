@@ -1,21 +1,23 @@
 <?php
+if (!isset($pos))
+	$pos = '0';
 try{
 	$errorManager = new ErrorsManager($db);
 	$errors = $errorManager->getAll(1);
 	$error = $errors[0];
-	// echo "taggle";
-	if (isset($pos))
-		$error->setIsPosition($pos);
+	$error->setIsPosition($pos);
 
 	if ( $error->isNow() && $error->isPosition() )
 		require('views/error.phtml');
-
-	// var_dump($error);
 }
 catch (Exception $e){
-	$error = new Errors;
-	$error->setType('Errors');
-	$error->setMessage( $e->getMessage() );
-	require('views/error.phtml');
+	$input_error['getAll'] = $e->getMessage() ;
 }
+
+if (isset($input_error))
+	foreach($input_error as $index)
+		echo " - ".$index;
+
+// var_dump($error);
+// var_dump($input_error);
 ?>

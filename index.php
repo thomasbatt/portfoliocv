@@ -5,7 +5,7 @@
 // var_dump($_SESSION);
 // exit;
 
-// $pos='0';
+// $input_error="";
 
 // ________ OVH-DEBUG ________
 
@@ -64,8 +64,8 @@ if (isset($_GET['page']))
 
 // ________ ROUTAGE ONEPAGE ________
 
-for($index=0;$index<sizeof($access);$index++){
-	$display_page[$access[$index]] = 'display-none';
+for($i=0;$i<sizeof($access);$i++){
+	$display_page[$access[$i]] = 'display-none';
 }
 $display_page[$page] = 'display-block';
 if (!isset($_GET['ajax']))
