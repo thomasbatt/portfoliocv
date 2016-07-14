@@ -8,6 +8,10 @@
         <br/>
         <form method="post" id="form" class="form" action="contact" enctype="multipart/form-data" >
             <?php require('views/contact_error.phtml') ?>
+            <div class="checkbox checkbox_send_copy">
+                <input type="checkbox" value="1" name="send_copy" id="send_copy" />
+                <label for="send_copy">M'envoyer une copie</label>
+            </div>
             <div class="input input_submit js_submit_contact">
                 <input type="hidden" value="send_mail" name="action"/>
                 <input type="submit" value="Envoyer" class="submit" />
