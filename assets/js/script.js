@@ -19,7 +19,7 @@ $('document').ready(function(){
                       newUrl += url[i]+"/";
                     }
                     newUrl += 'sendmailsuccess';
-                    window.location.href = newUrl ;
+                    // window.location.href = newUrl ;
                 }else{
                     $.get('index.php?ajax&page=contact', function(message){
                         $('.js-contact-error').replaceWith(message);

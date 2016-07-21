@@ -1,0 +1,227 @@
+.section-background{
+	min-height: 600px;
+	/*background: transparent;*/
+	background: url(../img/presentation.jpg) center center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	&-1{
+		background-image: url(../img/presentation.jpg);
+	}
+
+	&-2{
+		background-image: url(../img/contact.jpg);
+	}
+}
+
+/*----------------------------------------------- splash page ---------------------------------------------------*/
+
+.splash {
+	display: flex;
+	background: url(../img/splash.jpg) center center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+
+	&-content {
+		margin: auto;
+		max-width: 50%;
+		text-align: center;
+		color: #FFF;
+	}
+
+	&-logo{
+		max-width: 60%;
+		margin-bottom: 5px;
+	}
+
+	&-title{
+		font-size: 30px;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-family: "Open Sans";
+		max-width: 500px;
+		display: inline-block;
+		line-height: 1.2;
+	}
+
+	&-down{
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		color: #fff;
+
+		span{
+			display: block;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			font-weight: 300;
+			position: relative;
+			left: -3px;
+			transition: all .3s ease-in-out;
+			animation: scrollButton .45s ease infinite alternate;
+		}
+
+		i{
+			font-size: 46px;
+		}
+	}
+}
+
+@keyframes scrollButton{
+	0%{
+		transform: translateY(0px);
+	}
+	100%{		
+		transform: translateY(-4px);
+	}
+}
+
+/*----------------------------------------------- map --------------------------------------------------------*/
+
+.map {
+	&-columns{
+		position: relative;
+	}
+
+	&-france{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+	}
+
+	&-hover, &-hover2{
+		color: $color-1;
+	}
+}
+
+.jvectormap{
+	&-zoomin, &-zoomout, &-legend-cnt{
+		display: none !important;
+	}
+}
+
+
+.region-list{
+	padding: 50px 0;
+	ul {
+		font-weight: bold;
+		li{
+			line-height: 1.5;
+			a{
+				transition: all .1s ease-in-out;
+			}
+			ul{
+				display: none;
+			}
+		}
+	}
+}
+
+.department-list {
+	margin-left: 20px;
+}
+
+.retour-list {
+	margin-left: -20px;
+	margin-top: 20px;
+	border-top: 1px solid #9C9C9C;
+	display: inline-block;
+	padding-top: 10px;
+	color: #9C9C9C;
+	font-weight: normal;
+	font-size: 0.8rem;
+	transition: all .5s;
+
+	img {
+		width: 10px;
+	}
+
+	&:hover {
+		cursor: pointer;
+		color: $textColor;
+	}
+
+}
+
+.prestataire{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 2;
+	background: rgba(0,0,0,.8);
+	display: none;
+
+	&-content{
+		position: absolute;
+		max-width: 60%;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		box-shadow: 0px 0px 12px rgba(0,0,0,.5);
+		padding: 40px;
+		text-align: center;
+		z-index: 2;
+		background: #fff;
+	}
+
+	h3 {
+		margin-top: 10px;
+	}
+
+	figure {
+		float: left;
+
+		img {
+			max-width: 40px;
+		}
+	}
+
+	.button-close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		i{
+			font-size: 25px;
+		}
+	}
+
+	p {
+		padding: 10px 0;
+	}
+
+	address {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+
+/*------------------------------------------------ présentation ----------------------------------------------*/
+
+.presentation {
+	text-align: center;
+
+	&-background {
+	}
+
+	&-content {
+		margin: 40px 0;
+
+		figure {
+			display: inline-block;
+			background: #F4F4F4;
+			border-radius: 50%;
+			padding: 35px;
+			i{
+				font-size: 40px;
+			}
+		}
+	}
+}

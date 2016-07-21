@@ -1,0 +1,30 @@
+{
+  "name": "portfoliocv",
+  "homepage": "https://github.com/thomasbatt/portfoliocv",
+  "authors": [
+    "thomasbatt <thomasbatt@gmail.com>"
+  ],
+  "description": "Cv portfolio de Thomas BATT",
+  "main": "index.php",
+  "keywords": [
+    "Developpeur",
+    "Integrateur",
+    "Web",
+    "Strasbourg"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "wow": "^1.1.2",
+    "devicons": "^1.8.0",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}

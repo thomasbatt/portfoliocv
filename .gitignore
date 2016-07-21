@@ -4,6 +4,10 @@
 #/config/thomasbatt.sql
 
 # NPM .gitignore configuration
+/node_modules/*
+npm-debug.log
+
+# NPM .gitignore configuration
 
 # Bower
 /assets/Vendor/*

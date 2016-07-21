@@ -1,0 +1,51 @@
+input, textarea, select{
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0 5px rgba(#CCC, .6) inset;
+    border: 1px solid #EEE;
+    line-height: 1;
+    padding: 5px 10px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 2px;
+}
+
+textarea{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(#CCC, .6) inset;
+    border: 1px solid #EEE;
+    line-height: 1;
+    display: inline-block;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    height: 200px;
+    margin-top: 2px;
+}
+
+button{
+    padding: 10px 15px 8px 15px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    line-height: 1;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+
+.form-line{
+    margin-bottom: 10px !important;
+
+    label{
+        display: inline-block;
+        padding-top: 4px;
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+}
