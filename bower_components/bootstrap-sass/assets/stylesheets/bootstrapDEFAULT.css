@@ -1066,15 +1066,15 @@ th {
   content: "\e260";
 }
 * {
-/*  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;*/
+          box-sizing: border-box;
 }
 *:before,
 *:after {
-/*  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box;*/
+          box-sizing: border-box;
 }
 html {
   font-size: 10px;
@@ -1185,8 +1185,8 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-/*  font-weight: 500;
-  line-height: 1.1;*/
+  font-weight: 500;
+  line-height: 1.1;
   color: inherit;
 }
 h1 small,
@@ -1288,7 +1288,7 @@ h6,
   font-size: 12px;
 }
 p {
-  /*margin: 0 0 10px;*/
+  margin: 0 0 10px;
 }
 .lead {
   margin-bottom: 20px;
@@ -2509,8 +2509,8 @@ legend {
 label {
   display: inline-block;
   max-width: 100%;
-  /*margin-bottom: 5px;*/
-  /*font-weight: bold;*/
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -2637,8 +2637,8 @@ input[type="search"] {
 .checkbox {
   position: relative;
   display: block;
-  /*margin-top: 10px;*/
-  /*margin-bottom: 10px;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .radio label,
 .checkbox label {
@@ -2654,7 +2654,7 @@ input[type="search"] {
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
   margin-top: 4px \9;
-  /*margin-left: -20px;*/
+  margin-left: -20px;
 }
 .radio + .radio,
 .checkbox + .checkbox {
@@ -4846,12 +4846,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   background-color: #fff;
 }
 .label {
-  /*display: inline;*/
+  display: inline;
   padding: .2em .6em .3em;
-  /*font-size: 75%;*/
-  /*font-weight: bold;*/
+  font-size: 75%;
+  font-weight: bold;
   line-height: 1;
-  /*color: #fff;*/
+  color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -5994,7 +5994,7 @@ button.close {
   z-index: 1070;
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /*font-size: 12px;*/
+  font-size: 12px;
   font-style: normal;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6008,8 +6008,8 @@ button.close {
   word-spacing: normal;
   word-wrap: normal;
   white-space: normal;
-/*  filter: alpha(opacity=0);
-  opacity: 0;*/
+  filter: alpha(opacity=0);
+  opacity: 0;
 
   line-break: auto;
 }
@@ -6493,7 +6493,7 @@ button.close {
 .modal-header:after,
 .modal-footer:before,
 .modal-footer:after {
-  /*display: table;*/
+  display: table;
   content: " ";
 }
 .clearfix:after,

@@ -27,12 +27,17 @@ gulp.task('sass', function() {
 //     .pipe(gulp.dest('assets/css'));
 // });
 
-gulp.task('icons', function() { 
+gulp.task('icons-faw', function() { 
     return gulp.src('bower_components/fontawesome/fonts/**.*') 
         .pipe(gulp.dest('./assets/fonts')); 
 });
 
-gulp.task('default', ['sass', 'icons'], function() {
+gulp.task('icons-boo', function() { 
+    return gulp.src('bower_components/bootstrap-sass/assets/fonts/bootstrap/**.*') 
+        .pipe(gulp.dest('./assets/fonts/bootstrap')); 
+});
+
+gulp.task('default', ['sass', 'icons-faw', 'icons-boo'], function() {
     gulp.watch(['scss/**/*.scss'], ['sass']);
     // gulp.watch(['assets/css/*.css'], ['minify-css']);
 });
