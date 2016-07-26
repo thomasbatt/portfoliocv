@@ -1,17 +1,9 @@
 # Ignore configuration
-/config/dbConfig.php
-/config/globalConfig.php
-#/config/thomasbatt.sql
+/config/*
 
-# NPM .gitignore configuration
+# NPM 
 /node_modules/*
 npm-debug.log
 
-# NPM .gitignore configuration
-
 # Bower
-/assets/Vendor/*
-
-# Composer
-/vendor
-/vendor/._*
+/bower_componements/*

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License) coucou
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
@@ -2215,522 +2215,522 @@
   -moz-osx-font-smoothing: grayscale; }
 
 .devicons-git:before {
-  content: "\e602"; }
+  content: ""; }
 
 .devicons-git_compare:before {
-  content: "\e628"; }
+  content: ""; }
 
 .devicons-git_branch:before {
-  content: "\e625"; }
+  content: ""; }
 
 .devicons-git_commit:before {
-  content: "\e629"; }
+  content: ""; }
 
 .devicons-git_pull_request:before {
-  content: "\e626"; }
+  content: ""; }
 
 .devicons-git_merge:before {
-  content: "\e627"; }
+  content: ""; }
 
 .devicons-bitbucket:before {
-  content: "\e603"; }
+  content: ""; }
 
 .devicons-github_alt:before {
-  content: "\e608"; }
+  content: ""; }
 
 .devicons-github_badge:before {
-  content: "\e609"; }
+  content: ""; }
 
 .devicons-github:before {
-  content: "\e60a"; }
+  content: ""; }
 
 .devicons-github_full:before {
-  content: "\e617"; }
+  content: ""; }
 
 .devicons-java:before {
-  content: "\e638"; }
+  content: ""; }
 
 .devicons-ruby:before {
-  content: "\e639"; }
+  content: ""; }
 
 .devicons-scala:before {
-  content: "\e637"; }
+  content: ""; }
 
 .devicons-python:before {
-  content: "\e63c"; }
+  content: ""; }
 
 .devicons-go:before {
-  content: "\e624"; }
+  content: ""; }
 
 .devicons-ruby_on_rails:before {
-  content: "\e63b"; }
+  content: ""; }
 
 .devicons-django:before {
-  content: "\e61d"; }
+  content: ""; }
 
 .devicons-markdown:before {
-  content: "\e63e"; }
+  content: ""; }
 
 .devicons-php:before {
-  content: "\e63d"; }
+  content: ""; }
 
 .devicons-mysql:before {
-  content: "\e604"; }
+  content: ""; }
 
 .devicons-streamline:before {
-  content: "\e605"; }
+  content: ""; }
 
 .devicons-database:before {
-  content: "\e606"; }
+  content: ""; }
 
 .devicons-laravel:before {
-  content: "\e63f"; }
+  content: ""; }
 
 .devicons-javascript:before {
-  content: "\e64e"; }
+  content: ""; }
 
 .devicons-angular:before {
-  content: "\e653"; }
+  content: ""; }
 
 .devicons-backbone:before {
-  content: "\e652"; }
+  content: ""; }
 
 .devicons-coffeescript:before {
-  content: "\e651"; }
+  content: ""; }
 
 .devicons-jquery:before {
-  content: "\e650"; }
+  content: ""; }
 
 .devicons-modernizr:before {
-  content: "\e620"; }
+  content: ""; }
 
 .devicons-jquery_ui:before {
-  content: "\e654"; }
+  content: ""; }
 
 .devicons-ember:before {
-  content: "\e61b"; }
+  content: ""; }
 
 .devicons-dojo:before {
-  content: "\e61c"; }
+  content: ""; }
 
 .devicons-nodejs:before {
-  content: "\e619"; }
+  content: ""; }
 
 .devicons-nodejs_small:before {
-  content: "\e618"; }
+  content: ""; }
 
 .devicons-javascript_shield:before {
-  content: "\e64f"; }
+  content: ""; }
 
 .devicons-bootstrap:before {
-  content: "\e647"; }
+  content: ""; }
 
 .devicons-sass:before {
-  content: "\e64b"; }
+  content: ""; }
 
 .devicons-css3_full:before {
-  content: "\e64a"; }
+  content: ""; }
 
 .devicons-css3:before {
-  content: "\e649"; }
+  content: ""; }
 
 .devicons-html5:before {
-  content: "\e636"; }
+  content: ""; }
 
 .devicons-html5_multimedia:before {
-  content: "\e632"; }
+  content: ""; }
 
 .devicons-html5_device_access:before {
-  content: "\e633"; }
+  content: ""; }
 
 .devicons-html5_3d_effects:before {
-  content: "\e635"; }
+  content: ""; }
 
 .devicons-html5_connectivity:before {
-  content: "\e634"; }
+  content: ""; }
 
 .devicons-ghost_small:before {
-  content: "\e614"; }
+  content: ""; }
 
 .devicons-ghost:before {
-  content: "\e61f"; }
+  content: ""; }
 
 .devicons-magento:before {
-  content: "\e640"; }
+  content: ""; }
 
 .devicons-joomla:before {
-  content: "\e641"; }
+  content: ""; }
 
 .devicons-jekyll_small:before {
-  content: "\e60d"; }
+  content: ""; }
 
 .devicons-drupal:before {
-  content: "\e642"; }
+  content: ""; }
 
 .devicons-wordpress:before {
-  content: "\e60b"; }
+  content: ""; }
 
 .devicons-grunt:before {
-  content: "\e64c"; }
+  content: ""; }
 
 .devicons-bower:before {
-  content: "\e64d"; }
+  content: ""; }
 
 .devicons-npm:before {
-  content: "\e61e"; }
+  content: ""; }
 
 .devicons-yahoo_small:before {
-  content: "\e62b"; }
+  content: ""; }
 
 .devicons-yahoo:before {
-  content: "\e615"; }
+  content: ""; }
 
 .devicons-bing_small:before {
-  content: "\e600"; }
+  content: ""; }
 
 .devicons-windows:before {
-  content: "\e60f"; }
+  content: ""; }
 
 .devicons-linux:before {
-  content: "\e612"; }
+  content: ""; }
 
 .devicons-ubuntu:before {
-  content: "\e63a"; }
+  content: ""; }
 
 .devicons-android:before {
-  content: "\e60e"; }
+  content: ""; }
 
 .devicons-apple:before {
-  content: "\e611"; }
+  content: ""; }
 
 .devicons-appstore:before {
-  content: "\e613"; }
+  content: ""; }
 
 .devicons-phonegap:before {
-  content: "\e630"; }
+  content: ""; }
 
 .devicons-blackberry:before {
-  content: "\e623"; }
+  content: ""; }
 
 .devicons-stackoverflow:before {
-  content: "\e610"; }
+  content: ""; }
 
 .devicons-techcrunch:before {
-  content: "\e62c"; }
+  content: ""; }
 
 .devicons-codrops:before {
-  content: "\e62f"; }
+  content: ""; }
 
 .devicons-css_tricks:before {
-  content: "\e601"; }
+  content: ""; }
 
 .devicons-smashing_magazine:before {
-  content: "\e62d"; }
+  content: ""; }
 
 .devicons-netmagazine:before {
-  content: "\e62e"; }
+  content: ""; }
 
 .devicons-codepen:before {
-  content: "\e616"; }
+  content: ""; }
 
 .devicons-cssdeck:before {
-  content: "\e62a"; }
+  content: ""; }
 
 .devicons-hackernews:before {
-  content: "\e61a"; }
+  content: ""; }
 
 .devicons-dropbox:before {
-  content: "\e607"; }
+  content: ""; }
 
 .devicons-google_drive:before {
-  content: "\e631"; }
+  content: ""; }
 
 .devicons-visualstudio:before {
-  content: "\e60c"; }
+  content: ""; }
 
 .devicons-unity_small:before {
-  content: "\e621"; }
+  content: ""; }
 
 .devicons-raspberry_pi:before {
-  content: "\e622"; }
+  content: ""; }
 
 .devicons-chrome:before {
-  content: "\e643"; }
+  content: ""; }
 
 .devicons-ie:before {
-  content: "\e644"; }
+  content: ""; }
 
 .devicons-firefox:before {
-  content: "\e645"; }
+  content: ""; }
 
 .devicons-opera:before {
-  content: "\e646"; }
+  content: ""; }
 
 .devicons-safari:before {
-  content: "\e648"; }
+  content: ""; }
 
 .devicons-swift:before {
-  content: "\e655"; }
+  content: ""; }
 
 .devicons-symfony:before {
-  content: "\e656"; }
+  content: ""; }
 
 .devicons-symfony_badge:before {
-  content: "\e657"; }
+  content: ""; }
 
 .devicons-less:before {
-  content: "\e658"; }
+  content: ""; }
 
 .devicons-stylus:before {
-  content: "\e659"; }
+  content: ""; }
 
 .devicons-trello:before {
-  content: "\e65a"; }
+  content: ""; }
 
 .devicons-atlassian:before {
-  content: "\e65b"; }
+  content: ""; }
 
 .devicons-jira:before {
-  content: "\e65c"; }
+  content: ""; }
 
 .devicons-envato:before {
-  content: "\e65d"; }
+  content: ""; }
 
 .devicons-snap_svg:before {
-  content: "\e65e"; }
+  content: ""; }
 
 .devicons-raphael:before {
-  content: "\e65f"; }
+  content: ""; }
 
 .devicons-google_analytics:before {
-  content: "\e660"; }
+  content: ""; }
 
 .devicons-compass:before {
-  content: "\e661"; }
+  content: ""; }
 
 .devicons-onedrive:before {
-  content: "\e662"; }
+  content: ""; }
 
 .devicons-gulp:before {
-  content: "\e663"; }
+  content: ""; }
 
 .devicons-atom:before {
-  content: "\e664"; }
+  content: ""; }
 
 .devicons-cisco:before {
-  content: "\e665"; }
+  content: ""; }
 
 .devicons-nancy:before {
-  content: "\e666"; }
+  content: ""; }
 
 .devicons-clojure:before {
-  content: "\e668"; }
+  content: ""; }
 
 .devicons-clojure_alt:before {
-  content: "\e66a"; }
+  content: ""; }
 
 .devicons-perl:before {
-  content: "\e669"; }
+  content: ""; }
 
 .devicons-celluloid:before {
-  content: "\e66b"; }
+  content: ""; }
 
 .devicons-w3c:before {
-  content: "\e66c"; }
+  content: ""; }
 
 .devicons-redis:before {
-  content: "\e66d"; }
+  content: ""; }
 
 .devicons-postgresql:before {
-  content: "\e66e"; }
+  content: ""; }
 
 .devicons-webplatform:before {
-  content: "\e66f"; }
+  content: ""; }
 
 .devicons-jenkins:before {
-  content: "\e667"; }
+  content: ""; }
 
 .devicons-requirejs:before {
-  content: "\e670"; }
+  content: ""; }
 
 .devicons-opensource:before {
-  content: "\e671"; }
+  content: ""; }
 
 .devicons-typo3:before {
-  content: "\e672"; }
+  content: ""; }
 
 .devicons-uikit:before {
-  content: "\e673"; }
+  content: ""; }
 
 .devicons-doctrine:before {
-  content: "\e674"; }
+  content: ""; }
 
 .devicons-groovy:before {
-  content: "\e675"; }
+  content: ""; }
 
 .devicons-nginx:before {
-  content: "\e676"; }
+  content: ""; }
 
 .devicons-haskell:before {
-  content: "\e677"; }
+  content: ""; }
 
 .devicons-zend:before {
-  content: "\e678"; }
+  content: ""; }
 
 .devicons-gnu:before {
-  content: "\e679"; }
+  content: ""; }
 
 .devicons-yeoman:before {
-  content: "\e67a"; }
+  content: ""; }
 
 .devicons-heroku:before {
-  content: "\e67b"; }
+  content: ""; }
 
 .devicons-debian:before {
-  content: "\e67d"; }
+  content: ""; }
 
 .devicons-travis:before {
-  content: "\e67e"; }
+  content: ""; }
 
 .devicons-dotnet:before {
-  content: "\e67f"; }
+  content: ""; }
 
 .devicons-codeigniter:before {
-  content: "\e680"; }
+  content: ""; }
 
 .devicons-javascript_badge:before {
-  content: "\e681"; }
+  content: ""; }
 
 .devicons-yii:before {
-  content: "\e682"; }
+  content: ""; }
 
 .devicons-msql_server:before {
-  content: "\e67c"; }
+  content: ""; }
 
 .devicons-composer:before {
-  content: "\e683"; }
+  content: ""; }
 
 .devicons-krakenjs_badge:before {
-  content: "\e684"; }
+  content: ""; }
 
 .devicons-krakenjs:before {
-  content: "\e685"; }
+  content: ""; }
 
 .devicons-mozilla:before {
-  content: "\e686"; }
+  content: ""; }
 
 .devicons-firebase:before {
-  content: "\e687"; }
+  content: ""; }
 
 .devicons-sizzlejs:before {
-  content: "\e688"; }
+  content: ""; }
 
 .devicons-creativecommons:before {
-  content: "\e689"; }
+  content: ""; }
 
 .devicons-creativecommons_badge:before {
-  content: "\e68a"; }
+  content: ""; }
 
 .devicons-mitlicence:before {
-  content: "\e68b"; }
+  content: ""; }
 
 .devicons-senchatouch:before {
-  content: "\e68c"; }
+  content: ""; }
 
 .devicons-bugsense:before {
-  content: "\e68d"; }
+  content: ""; }
 
 .devicons-extjs:before {
-  content: "\e68e"; }
+  content: ""; }
 
 .devicons-mootools_badge:before {
-  content: "\e68f"; }
+  content: ""; }
 
 .devicons-mootools:before {
-  content: "\e690"; }
+  content: ""; }
 
 .devicons-ruby_rough:before {
-  content: "\e691"; }
+  content: ""; }
 
 .devicons-komodo:before {
-  content: "\e692"; }
+  content: ""; }
 
 .devicons-coda:before {
-  content: "\e693"; }
+  content: ""; }
 
 .devicons-bintray:before {
-  content: "\e694"; }
+  content: ""; }
 
 .devicons-terminal:before {
-  content: "\e695"; }
+  content: ""; }
 
 .devicons-code:before {
-  content: "\e696"; }
+  content: ""; }
 
 .devicons-responsive:before {
-  content: "\e697"; }
+  content: ""; }
 
 .devicons-dart:before {
-  content: "\e698"; }
+  content: ""; }
 
 .devicons-aptana:before {
-  content: "\e699"; }
+  content: ""; }
 
 .devicons-mailchimp:before {
-  content: "\e69a"; }
+  content: ""; }
 
 .devicons-netbeans:before {
-  content: "\e69b"; }
+  content: ""; }
 
 .devicons-dreamweaver:before {
-  content: "\e69c"; }
+  content: ""; }
 
 .devicons-brackets:before {
-  content: "\e69d"; }
+  content: ""; }
 
 .devicons-eclipse:before {
-  content: "\e69e"; }
+  content: ""; }
 
 .devicons-cloud9:before {
-  content: "\e69f"; }
+  content: ""; }
 
 .devicons-scrum:before {
-  content: "\e6a0"; }
+  content: ""; }
 
 .devicons-prolog:before {
-  content: "\e6a1"; }
+  content: ""; }
 
 .devicons-terminal_badge:before {
-  content: "\e6a2"; }
+  content: ""; }
 
 .devicons-code_badge:before {
-  content: "\e6a3"; }
+  content: ""; }
 
 .devicons-mongodb:before {
-  content: "\e6a4"; }
+  content: ""; }
 
 .devicons-meteor:before {
-  content: "\e6a5"; }
+  content: ""; }
 
 .devicons-meteorfull:before {
-  content: "\e6a6"; }
+  content: ""; }
 
 .devicons-fsharp:before {
-  content: "\e6a7"; }
+  content: ""; }
 
 .devicons-rust:before {
-  content: "\e6a8"; }
+  content: ""; }
 
 .devicons-ionic:before {
-  content: "\e6a9"; }
+  content: ""; }
 
 .devicons-sublime:before {
-  content: "\e6aa"; }
+  content: ""; }
 
 @font-face {
   font-family: 'devicon';
-  src: url("../fonts/devicon.eot?-hdf3wh");
-  src: url("../fonts/devicon.eot?#iefix-hdf3wh") format("embedded-opentype"), url("../fonts/devicon.woff?-hdf3wh") format("woff"), url("../fonts/devicon.ttf?-hdf3wh") format("truetype"), url("../fonts/devicon.svg?-hdf3wh#devicon") format("svg");
+  src: url("fonts/devicon.eot?-hdf3wh");
+  src: url("fonts/devicon.eot?#iefix-hdf3wh") format("embedded-opentype"), url("fonts/devicon.woff?-hdf3wh") format("woff"), url("fonts/devicon.ttf?-hdf3wh") format("truetype"), url("fonts/devicon.svg?-hdf3wh#devicon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -7153,7 +7153,6 @@ a {
     color: #23527c;
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -8065,7 +8064,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -8588,7 +8586,6 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
