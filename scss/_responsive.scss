@@ -6,15 +6,9 @@
   .visible-l, .visible-m {
     display: block;
   }
-}
-
-@media only screen and (min-width: 768px) {
   .l-header {
     height: 100vh;
   }
-}
-
-@media only screen and (min-width: 768px) {
   .l-nav {
     margin: 0 auto;
     text-align: center;
@@ -34,9 +28,6 @@
       }
     }
   }
-}
-
-@media only screen and (min-width: 768px) {
   .about_me {
     display: flex;
     align-items: center;
@@ -46,15 +37,6 @@
       width: 150px;
     }
   }
-}
-
-@media only screen and (min-width: 1200px) {
-  .l-main {
-    width: 1200px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
   .brackets_links {
     &.active {
       &::after, &::before {
@@ -108,9 +90,6 @@
       }
     }
   }
-}
-
-@media only screen and (min-width: 768px) {
   .portfolio .project {
     margin: 0 auto;
     display: flex;
@@ -128,16 +107,10 @@
       }
     }
   }
-}
-
-@media only screen and (min-width: 768px) {
   .skills {
     padding: 10px;
     margin: 50px 0 0;
   }
-}
-
-@media only screen and (min-width: 768px) {
   .col-m-1 {
     width: 8.33333%;
   }
@@ -181,6 +154,9 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .l-main {
+    width: 1200px;
+  }
   .col-l-1 {
     width: 8.33333%;
   }

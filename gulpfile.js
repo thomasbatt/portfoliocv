@@ -1,6 +1,9 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var cleanCSS = require('gulp-clean-css');
+var concat = require('gulp-concat');  
+var rename = require('gulp-rename');  
+var uglify = require('gulp-uglify'); 
 
 var sassPaths = [
     'bower_components/bootstrap-sass/assets/stylesheets',
@@ -40,11 +43,26 @@ var iconsPaths = [
 
 gulp.task('icons', function() { 
     return gulp.src(iconsPaths) 
-    .pipe(gulp.dest('./assets/fonts')); 
+    .pipe(gulp.dest('assets/fonts')); 
+});
+
+var jsFiles = [
+    'scripts/**/*.js',  
+    // 'dist/scripts'
+];
+
+gulp.task('ccatjs-minify', function() {  
+    return gulp.src(jsFiles)
+    .pipe(concat('app.js'))
+    // .pipe(gulp.dest(jsDest))
+    // .pipe(rename('scripts.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js'));
 });
 
 
-gulp.task('default', ['sass','icons'], function() {
+gulp.task('default', ['sass','icons','ccatjs-minify'], function() {
     gulp.watch(['scss/**/*.scss'], ['sass']);
+    gulp.watch(['scripts/**/*.js'], ['ccatjs-minify']);
     // gulp.watch(['assets/css/*.css'], ['minify-css']);
 });

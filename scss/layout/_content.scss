@@ -116,6 +116,10 @@
   }
 }
 
+.row::before, .row::after {
+    display: block;
+}
+
 .brackets_links {
   color: $textColor;
   cursor: pointer;

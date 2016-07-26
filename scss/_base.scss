@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
-
 #main-nav a, .brackets_links, .btn, .button, .l-header .wrapper .btn {
   text-decoration: none;
 }
@@ -208,4 +206,8 @@ body {
 
 strong {
   font-weight: 900;
+}
+
+.row::before, .row::after {
+    display: block;
 }
