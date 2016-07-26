@@ -13,11 +13,11 @@ $config = [
 //-------------------- OVH HOME --------------------
 
 // $config = [
-// 	'host' => '',
+// 	'host' => 'thomasbazpetite2.mysql.db',
 // 	'port' => '3306',
-// 	'login' => '',
-// 	'password' => '',
-// 	'bdd' => '',
+// 	'login' => 'thomasbazpetite2',
+// 	'password' => 'Janolap10',
+// 	'bdd' => 'thomasbazpetite2',
 // ];
 
 ?>
