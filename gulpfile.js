@@ -4,8 +4,10 @@ var cleanCSS = require('gulp-clean-css');
 
 var sassPaths = [
     'bower_components/bootstrap-sass/assets/stylesheets',
-    'bower_components/wow/css/libs',
+    'bower_components/animate.css',
     'bower_components/devicons/css',
+    'bower_components/devicon',
+    'bower_components/elh-tooltip',
     'bower_components/font-awesome/scss'
 ];
 
@@ -28,18 +30,18 @@ gulp.task('sass', function() {
 // });
 
 gulp.task('icons', function() { 
-    gulp.src('bower_components/fontawesome/fonts/**.*') 
+    gulp.src('bower_components/bootstrap-sass/assets/fonts/*/**.*') 
         .pipe(gulp.dest('./assets/fonts')); 
-    gulp.src('bower_components/bootstrap-sass/assets/fonts/bootstrap/**.*') 
-        .pipe(gulp.dest('./assets/fonts/bootstrap')); 
+    gulp.src('bower_components/devicons/fonts/**.*') 
+        .pipe(gulp.dest('./assets/fonts')); 
+    gulp.src('bower_components/devicon/fonts/**.*') 
+        .pipe(gulp.dest('./assets/fonts')); 
+    gulp.src('bower_components/font-awesome/fonts/**.*') 
+        .pipe(gulp.dest('./assets/fonts')); 
 });
 
-// gulp.task('icons-boo', function() { 
-//     return gulp.src('bower_components/bootstrap-sass/assets/fonts/bootstrap/**.*') 
-//         .pipe(gulp.dest('./assets/fonts/bootstrap')); 
-// });
 
-gulp.task('default', ['sass', 'icons', 'icons-boo'], function() {
+gulp.task('default', ['sass', 'icons'], function() {
     gulp.watch(['scss/**/*.scss'], ['sass']);
     // gulp.watch(['assets/css/*.css'], ['minify-css']);
 });

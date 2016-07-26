@@ -1,7 +1,7 @@
 {
-  "name": "foundation-sites-template",
+  "name": "bootstrap-sites",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "Bootstrap for Sites project.",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.0",
