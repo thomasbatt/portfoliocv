@@ -2,6 +2,8 @@
 
 *Site portfolio de validation de fin de formation 3wAcademy realisé en HTML5, CSS3, JavaScript, PHP, Sql*
 
+- [www.thomasbatt.fr](http://thomasbatt.fr)
+
 
 ### Dependences
 
@@ -26,7 +28,7 @@
 
 ### Installation
 
-Pour installer via Bower, simplement faire les commandes suivantes:
+Pour installer faites simplement les commandes suivantes:
 
 - NPM
 
