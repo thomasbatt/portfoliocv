@@ -3,7 +3,7 @@
 *Site portfolio de validation de fin de formation 3wAcademy realisé en HTML5, CSS3, JavaScript, PHP, Sql*
 
 
-### Dependencies
+### Dependences
 
 - [animate.css](https://github.com/daneden/animate.css)
 
@@ -26,17 +26,17 @@
 
 ### Installation
 
-To install via Bower, simply do the following:
-
-- Bower
-
-```bash
-   bower install
-```
+Pour installer via Bower, simplement faire les commandes suivantes:
 
 - NPM
 
 ```bash
-   npm install
+   $ npm install
+```
+
+- Bower
+
+```bash
+   $ bower install
 ```
 
