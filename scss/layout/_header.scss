@@ -1,81 +1,135 @@
-.home .header {
-	display: none;
+.l-header {
+  height: 100vh;
+  background: url(../img/DSC_0074.jpg);
+  background-size: cover;
+  color: $textColor2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: 0 0;
+      border: 2px solid $lightColor;
+      margin: 0 auto;
+      overflow: hidden;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    .separator {
+      margin: 0 auto;
+      content: ' ';
+      background-color: $bgColor2;
+      height: 2px;
+      width: 25vw;
+    }
+    .desc {
+      font-size: .8em;
+      margin-bottom: 50px;
+    }
+    .btn {
+      cursor: pointer;
+    }
+  }
 }
 
-.header{
+.l-nav {
+  min-height: 60px;
+  background: $bgColor;
+  &.nav-header {
+    height: 60px;
+  }
+  &.open {
+    .nav-bar {
+      transform: scale(1, 1);
+      opacity: 1;
+      height: 153px;
+    }
+    .title {
+      display: none;
+    }
+  }
+  &.shadow {
+    box-shadow: 0 1px 3px $textColor;
+  }
+  .hamburger {
+    position: absolute;
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 1rem;
+      height: 0;
+      top: 15px;
+      left: 22px;
+      box-shadow: 0 10px 0 1px #000, 0 16px 0 1px #000, 0 22px 0 1px #000;
+    }
+  }
+  .title {
+    display: block;
+    position: absolute;
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    right: 22px;
+  }
+  .nav-bar {
+    transform-origin: top;
+    animation-fill-mode: forwards;
+    transform: scale(1, 0);
+    transition: all .5s linear;
+    height: 0;
+    margin: 0;
+    padding-left: 60px;
+    li {
+      display: block;
+      list-style: none;
+      text-align: right;
+      border-bottom: 1px solid $textColor;
+      &:last-child {
+        border: none;
+      }
+      &:hover {
+        border-color: $textColor2;
+      }
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 13px;
+        &:hover {
+          color: $textColor2;
+          border-color: $textColor2;
+        }
+      }
+    }
+  }
+}
 
-	position: fixed;
-	width: 100%;
-	// height: 60px;
-	background: #FFF;
-	box-shadow: 0px 4px 4px 0px #E7E7E7;
-	z-index: 2;
-	text-align: center;
-	/*display: none;*/
+@keyframes nav-bar {
+  0% {
+    display: none;
+    height: 0;
+  }
 
-	&-logo {
-		
-		img {
-			max-height: 50px;
-			margin-top: 5px;
-		}
-	}
+  1% {
+    display: block;
+    height: 0;
+  }
 
-/*------------------------------------------ menu principal ------------------------------*/
-
-	&-nav{
-
-		ul{
-
-			li{
-				display: inline-block;
-				vertical-align: middle;
-				position: relative;
-
-				a{
-					display: inline-block;
-					text-transform: uppercase;
-					padding: 20px 30px;
-				}
-
-				i {
-					position: absolute;
-					left: 90%;
-					top: 22px;
-					cursor: pointer;
-				}		
-
-				&:hover > ul {
-					display: block;
-				}
-			}
-
-			ul{
-				background: #fff;
-				position: absolute;
-				display: none;
-				// padding: 10px 0;
-				top: 100%;
-				left: 0;
-			    text-align: left;
-			    border-top: 4px solid $color-1;
-			    box-shadow: 0px 0px 1px 0px #656565;
-
-			    li{
-			    	display: block;
-			    	font-size: 0.8rem;
-
-			    	a{
-			    		padding: 5px 10px;
-			    		white-space : nowrap;
-						text-transform: none;
-			    	}
-			    }
-			}
-		}
-
-		.mobile-logo {
-			display: none;	
-		}
-	}
+  100% {
+    height: 255px;
+  }
 }

@@ -1,227 +1,189 @@
-.section-background{
-	min-height: 600px;
-	/*background: transparent;*/
-	background: url(../img/presentation.jpg) center center no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-
-	&-1{
-		background-image: url(../img/presentation.jpg);
-	}
-
-	&-2{
-		background-image: url(../img/contact.jpg);
-	}
+#main-nav a, #posts-list time, .button, .main-footer, .projects-list span, .section-subtitle, figcaption, h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
 }
 
-/*----------------------------------------------- splash page ---------------------------------------------------*/
-
-.splash {
-	display: flex;
-	background: url(../img/splash.jpg) center center no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-
-	&-content {
-		margin: auto;
-		max-width: 50%;
-		text-align: center;
-		color: #FFF;
-	}
-
-	&-logo{
-		max-width: 60%;
-		margin-bottom: 5px;
-	}
-
-	&-title{
-		font-size: 30px;
-		text-transform: uppercase;
-		font-weight: 300;
-		font-family: "Open Sans";
-		max-width: 500px;
-		display: inline-block;
-		line-height: 1.2;
-	}
-
-	&-down{
-		position: absolute;
-		bottom: 30px;
-		left: 50%;
-		transform: translateX(-50%);
-		cursor: pointer;
-		color: #fff;
-
-		span{
-			display: block;
-			text-transform: uppercase;
-			margin-bottom: 10px;
-			font-weight: 300;
-			position: relative;
-			left: -3px;
-			transition: all .3s ease-in-out;
-			animation: scrollButton .45s ease infinite alternate;
-		}
-
-		i{
-			font-size: 46px;
-		}
-	}
+#main-subtitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  display: block;
+  color: $textHomeColor;
 }
 
-@keyframes scrollButton{
-	0%{
-		transform: translateY(0px);
-	}
-	100%{		
-		transform: translateY(-4px);
-	}
+#main-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  display: block;
+  color: $textHomeColor;
+  font-size: 58px;
+  line-height: 52px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-/*----------------------------------------------- map --------------------------------------------------------*/
-
-.map {
-	&-columns{
-		position: relative;
-	}
-
-	&-france{
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		left: 0;
-	}
-
-	&-hover, &-hover2{
-		color: $color-1;
-	}
+#main-subtitle {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 400;
 }
 
-.jvectormap{
-	&-zoomin, &-zoomout, &-legend-cnt{
-		display: none !important;
-	}
+#main-nav a, .button {
+  color: $textHomeColor;
+  border: 2px solid $textHomeColor;
 }
 
-
-.region-list{
-	padding: 50px 0;
-	ul {
-		font-weight: bold;
-		li{
-			line-height: 1.5;
-			a{
-				transition: all .1s ease-in-out;
-			}
-			ul{
-				display: none;
-			}
-		}
-	}
+#main-nav {
+  a {
+    &.selected, &:hover {
+      background: $textHomeColor;
+      color: #291A03;
+    }
+    font-size: 14px;
+    line-height: 14px;
+    padding: 12px 24px 11px;
+    display: inline-block;
+    margin: 7px;
+    text-transform: uppercase;
+  }
+  margin-top: 35px;
 }
 
-.department-list {
-	margin-left: 20px;
+.button {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 12px 24px 11px;
+  display: inline-block;
+  margin: 7px;
+  text-transform: uppercase;
 }
 
-.retour-list {
-	margin-left: -20px;
-	margin-top: 20px;
-	border-top: 1px solid #9C9C9C;
-	display: inline-block;
-	padding-top: 10px;
-	color: #9C9C9C;
-	font-weight: normal;
-	font-size: 0.8rem;
-	transition: all .5s;
-
-	img {
-		width: 10px;
-	}
-
-	&:hover {
-		cursor: pointer;
-		color: $textColor;
-	}
-
+.social-icon {
+  width: 45px;
+  height: 45px;
 }
 
-.prestataire{
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100%;
-	z-index: 2;
-	background: rgba(0,0,0,.8);
-	display: none;
+.gallery-item:hover img {
+  -webkit-box-shadow: none;
+}
 
-	&-content{
-		position: absolute;
-		max-width: 60%;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
-		box-shadow: 0px 0px 12px rgba(0,0,0,.5);
-		padding: 40px;
-		text-align: center;
-		z-index: 2;
-		background: #fff;
-	}
+.features-hover {
+  display: none;
+  position: absolute;
+  padding: 8px;
+  background: $bgColor;
+  -webkit-border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
 
-	h3 {
-		margin-top: 10px;
-	}
+small {
+  font-size: 60%;
+}
 
-	figure {
-		float: left;
+h1 {
+  font-size: 1.5em;
+}
 
-		img {
-			max-width: 40px;
-		}
-	}
+h2 {
+  font-size: 1.325em;
+}
 
-	.button-close {
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		cursor: pointer;
-		i{
-			font-size: 25px;
-		}
-	}
+h3 {
+  font-size: 1.25em;
+}
 
-	p {
-		padding: 10px 0;
-	}
+h4 {
+  font-size: 1.125em;
+}
 
-	address {
-		text-align: center;
-		margin-bottom: 10px;
-	}
+h5, h6 {
+  font-size: 1em;
+}
+
+ul {
+  list-style: square inside;
+}
+
+ol ol, ul ol {
+  list-style: lower-roman inside;
+}
+
+ol ul, ul ul {
+  list-style: disc inside;
+  margin-bottom: 0;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+blockquote {
+  margin-left: 45px;
+  margin-right: 60px;
+  border-left: 5px solid $bgColor;
+  padding-left: 10px;
+  em {
+    text-align: right;
+    font-style: normal;
+  }
+}
+
+.l-header .wrapper, .text-center {
+  text-align: center;
+}
+
+blockquote em:before {
+  content: "â€”";
+}
+
+pre {
+  border: 2px solid #000;
+  background: rgba(255, 214, 153, 0.4) !important;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.no-bullet {
+  list-style: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.preload, .visible-l, .visible-m {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }
 
 
-/*------------------------------------------------ présentation ----------------------------------------------*/
+@keyframes title {
+  0% {
+    display: block;
+    opacity: 1;
+  }
 
-.presentation {
-	text-align: center;
+  99% {
+    opacity: 0;
+  }
 
-	&-background {
-	}
-
-	&-content {
-		margin: 40px 0;
-
-		figure {
-			display: inline-block;
-			background: #F4F4F4;
-			border-radius: 50%;
-			padding: 35px;
-			i{
-				font-size: 40px;
-			}
-		}
-	}
+  100% {
+    display: none;
+  }
 }

@@ -1,26 +1,28 @@
-@import "font-awesome";
-@import "devicons.scss";
-@import "devicon";
-@import "components/devicon-conf";
-@import "devicon-colors";
-@import "components/tooltip";
-@import "animate";
 
-@import "vendors/bootstrap/app"; 
+// --------------DEPENDENCIES------------
+@import "font-awesome",
+		"devicons.scss",
+		"devicon",
+		"devicon-colors",
+		"animate";
 
-// @import "vendors/bootstrap/app",
-// 		"components/fonts",
-// 		"variables",
-// 		"base"; 
+// ----------------BASE------------
+@import "vendors/bootstrap/app",
+		"components/fonts",
+		"variables",
+		"base"; 
 
-// @import "components/forms";
+// ---------------LAYOUT------------
+@import "layout/header",
+		"layout/content",
+		"layout/home",
+		"layout/footer";
 
-// @import "layout/header",
-// 		"layout/content",
-// 		"layout/home",
-// 		"layout/actu",
-// 		"layout/footer";
+// --------------COMPONENTS------------
+@import "components/devicon-conf",
+		"components/tooltip",
+		"components/forms",
+		"components/modal";
 
-// @import "responsive";
-
-@import "styleIMP";
+// -------------RESPONSIVE------------
+@import "responsive";

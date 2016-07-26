@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
+var plugins = require('gulp-load-plugins')();
 var cleanCSS = require('gulp-clean-css');
 
 var sassPaths = [
@@ -11,15 +11,17 @@ var sassPaths = [
     'bower_components/font-awesome/scss'
 ];
 
+
 gulp.task('sass', function() {
     return gulp.src('scss/app.scss')
-    .pipe($.sass({
+    .pipe(plugins.sass({
         includePaths: sassPaths
     })
-    .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
+    .on('error', plugins.sass.logError))
+    .pipe(plugins.autoprefixer({
         browsers: ['last 20 versions', 'ie >= 9']
     }))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('assets/css'));
 });
 
@@ -29,19 +31,20 @@ gulp.task('sass', function() {
 //     .pipe(gulp.dest('assets/css'));
 // });
 
+var iconsPaths = [
+    'bower_components/bootstrap-sass/assets/fonts/*/**.*',
+    'bower_components/devicons/fonts/**.*',
+    'bower_components/devicon/fonts/**.*',
+    'bower_components/font-awesome/fonts/**.*'
+];
+
 gulp.task('icons', function() { 
-    gulp.src('bower_components/bootstrap-sass/assets/fonts/*/**.*') 
-        .pipe(gulp.dest('./assets/fonts')); 
-    gulp.src('bower_components/devicons/fonts/**.*') 
-        .pipe(gulp.dest('./assets/fonts')); 
-    gulp.src('bower_components/devicon/fonts/**.*') 
-        .pipe(gulp.dest('./assets/fonts')); 
-    gulp.src('bower_components/font-awesome/fonts/**.*') 
-        .pipe(gulp.dest('./assets/fonts')); 
+    return gulp.src(iconsPaths) 
+    .pipe(gulp.dest('./assets/fonts')); 
 });
 
 
-gulp.task('default', ['sass', 'icons'], function() {
+gulp.task('default', ['sass','icons'], function() {
     gulp.watch(['scss/**/*.scss'], ['sass']);
     // gulp.watch(['assets/css/*.css'], ['minify-css']);
 });
