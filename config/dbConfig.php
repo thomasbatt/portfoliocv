@@ -1,13 +1,5 @@
 <?php
 
-/**
- * ICI on met les information de la base de données
- * le port 3306 est le port par défaut de mysql sous Linux
- * Si vous êtes sous mamp il me semble qu'il faut mettre 8000 ou un truc dans le genre
- * Sous la chose, aucune idée et je ne veut même pas le savoir ! LOL !
- */
- 
- 
 //-------------------- 3WA HOME --------------------
 
 $config = [
@@ -21,11 +13,11 @@ $config = [
 //-------------------- OVH HOME --------------------
 
 // $config = [
-// 	'host' => 'thomasbazpetite2.mysql.db',
+// 	'host' => '',
 // 	'port' => '3306',
-// 	'login' => 'thomasbazpetite2',
-// 	'password' => 'Janolap10',
-// 	'bdd' => 'thomasbazpetite2',
+// 	'login' => '',
+// 	'password' => '',
+// 	'bdd' => '',
 // ];
 
 ?>
