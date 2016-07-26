@@ -1,0 +1,40 @@
+{
+  "name": "elh-tooltip",
+  "authors": [
+    "Dieter Stinglhamber <elhebert@hotmail.be>"
+  ],
+  "description": "A light directive to create tooltips in Angular",
+  "main": "tooltip.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Elhebert/elh-tooltip.git"
+  },
+  "moduleType": [],
+  "keywords": [
+    "tooltip",
+    "ng",
+    "angular",
+    "ngtooltip"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Elhebert/elh-tooltip",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  },
+  "_release": "6d34bcf17a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6d34bcf17abe9193b31c2c08e1894f98d851a9c1"
+  },
+  "_source": "https://github.com/Elhebert/elh-tooltip.git",
+  "_target": "*",
+  "_originalSource": "elh-tooltip"
+}
