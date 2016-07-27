@@ -1,3 +1,4 @@
+
 $('document').ready(function(){ 
 
     $('.js_submit_contact').click(function(evenement)
@@ -96,11 +97,6 @@ $('document').ready(function(){
 
 
 });
-
-
-
-
-
 
 
 
