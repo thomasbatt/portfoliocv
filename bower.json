@@ -29,7 +29,7 @@
     "devicon": "*",
     "wow": "wowjs#^1.1.2",
     "animate.css": "^3.5.2",
-    "ngSticky": "^1.8.12",
+    "ngSticky": "^1.8.6",
     "angular": "^1.5.0"
   }
 }
