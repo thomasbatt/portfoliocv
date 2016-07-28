@@ -1,8 +1,8 @@
 #Mon portfolio CV
 
-*Site portfolio de validation de fin de formation 3wAcademy realisé en HTML5, CSS3, JavaScript, PHP, Sql*
+*Projet de validation de formation 3wAcademy realisée en HTML5, CSS3, JavaScript, PHP, Sql*
 
-##[www.thomasbatt.fr](http://thomasbatt.fr)
+###[www.thomasbatt.fr](http://thomasbatt.fr)
 
 
 ### Dependences 
