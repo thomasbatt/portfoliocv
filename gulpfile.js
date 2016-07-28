@@ -52,7 +52,7 @@ var scriptFiles = [
     bo+'jquery/dist/jquery.min.js',
     bo+'ngSticky/dist/sticky.min.js',
     bo+'wow/dist/wow.min.js',
-    // bo+'elh-tooltip/tooltip.js',
+    bo+'elh-tooltip/tooltip.js',
 ];
 gulp.task('scripts', function() { 
     gulp.src('scripts/website.js') 
@@ -75,6 +75,19 @@ gulp.task('icons', function() { 
     return gulp.src(iconsFiles) 
         .pipe(gulp.dest('assets/fonts')); 
 });
+
+ // --------------------Build AngularJS --------------------------
+gulp.task('buildAngular', function() {
+    return lazypipe()
+        .pipe(plugins.ngHtml2js, {
+            moduleName: bower.name,
+            prefix: '/' + bower.name + '/',
+            stripPrefix: '/scripts/app'
+        })
+        .pipe(g.concat, bower.name + '-templates.js')
+        .pipe(gulp.dest, 'scripts/')
+        // .pipe(livereload)();
+}
 
 
 // -------------------------WATCHERS----------------------------
