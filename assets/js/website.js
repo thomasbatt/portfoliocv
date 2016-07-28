@@ -130,7 +130,7 @@ function(t) {
             controller: n,
             controllerAs: "vm",
             link: e,
-            templateUrl: "./interface/socialIcon.html",
+            templateUrl: "scripts/interface/socialIcon.html",
             scope: {
                 socialIcon: "@",
                 socialLink: "@"
@@ -151,7 +151,7 @@ function(t) {
             controller: t,
             controllerAs: "vm",
             restrict: "A",
-            templateUrl: "./interface/navbarElement.html",
+            templateUrl: "scripts/interface/navbarElement.html",
             scope: {
                 navbarElement: "@"
             }
@@ -180,7 +180,7 @@ function(t, e) {
             controllerAs: "vm",
             restrict: "AE",
             link: e,
-            templateUrl: "./interface/navbar.html",
+            templateUrl: "scripts/interface/navbar.html",
             scope: !1
         }
     }
@@ -377,7 +377,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-modal" offset="120" data-modal-id="contacter">contact</a> </li></ul>')
+        t.put("scripts/interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-modal" offset="120" data-modal-id="contacter">contact</a> </li></ul>')
     }])
 }(),
 function(t) {
@@ -387,7 +387,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/navbarElement.html", '<a class="brackets_links" offset="120" du-scrollspy du-smooth-scroll="{{:: vm.anchor }}">{{:: vm.title }}</a>')
+        t.put("scripts/interface/navbarElement.html", '<a class="brackets_links" offset="120" du-scrollspy du-smooth-scroll="{{:: vm.anchor }}">{{:: vm.title }}</a>')
     }])
 }(),
 function(t) {
@@ -397,7 +397,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/socialIcon.html", '<a ng-href="{{:: vm.link }}" target="_blank"><img ng-src="./assets/images/icons/{{:: vm.icon }}.png" class="social-img {{:: vm.class }}" alt="{{:: vm.alt }}"></a>')
+        t.put("scripts/interface/socialIcon.html", '<a ng-href="{{:: vm.link }}" target="_blank"><img ng-src="./assets/images/icons/{{:: vm.icon }}.png" class="social-img {{:: vm.class }}" alt="{{:: vm.alt }}"></a>')
     }])
 }(),
 function(t) {
@@ -407,7 +407,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./skills/skillElement.html", '<i title="{{ techno }}" class="devicon-{{ techno | lowercase }}-plain colored"></i>')
+        t.put("scripts/interface/skillElement.html", '<i title="{{ techno }}" class="devicon-{{ techno | lowercase }}-plain colored"></i>')
     }])
 }(),
 function(t) {
@@ -417,7 +417,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./skills/skills.html", '<div class="col-s-12 col-m-4"><h3>Development</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'dev\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Tools I use(d)</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'tool\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Sys admin</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'sys\'" skill="skill.techno"></skill-element></div>')
+        t.put("scripts/interface/skills.html", '<div class="col-s-12 col-m-4"><h3>Development</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'dev\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Tools I use(d)</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'tool\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Sys admin</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'sys\'" skill="skill.techno"></skill-element></div>')
     }])
 }(),
 function(t) {
@@ -427,7 +427,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./timeline/timeline.html", '<div class="content"><h2>Timeline</h2></div>')
+        t.put("scripts/interface/timeline.html", '<div class="content"><h2>Timeline</h2></div>')
     }])
 }(),
 function(t) {
@@ -437,6 +437,6 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./projects/projects.html", '<div class="project col-s-12" ng-repeat="project in vm.projects"><div class="col-m-4 visible-m"><div class="border">{{:: project.icon }}</div></div><div class="description col-m-8">{{:: project.name }}<p>{{:: project.description }} <i ng-if="{{:: project.link  }}" class="devicons devicons-responsive"></i><a ng-href="{{: project.link }}">Demo</a><br><i ng-if="{{:: project.github }}" class="devicons devicons-github"></i><a ng-href="{{:: project.github }}">Github</a><br><skill-element ng-repeat="techno in project.technologies" skill="techno"></skill-element></p></div></div>')
+        t.put("scripts/interface/projects.html", '<div class="project col-s-12" ng-repeat="project in vm.projects"><div class="col-m-4 visible-m"><div class="border">{{:: project.icon }}</div></div><div class="description col-m-8">{{:: project.name }}<p>{{:: project.description }} <i ng-if="{{:: project.link  }}" class="devicons devicons-responsive"></i><a ng-href="{{: project.link }}">Demo</a><br><i ng-if="{{:: project.github }}" class="devicons devicons-github"></i><a ng-href="{{:: project.github }}">Github</a><br><skill-element ng-repeat="techno in project.technologies" skill="techno"></skill-element></p></div></div>')
     }])
 }();

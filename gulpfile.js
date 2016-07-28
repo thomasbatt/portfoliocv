@@ -47,8 +47,8 @@ gulp.task('sass', function() {
 
 // -----------------------JS ASSETS---------------------------
 var scriptFiles = [
-    // 'scripts/angularjs.js',
     bo+'angular/angular.min.js',
+    'scripts/vendors/angular-rc.min.js',
     bo+'jquery/dist/jquery.min.js',
     bo+'ngSticky/dist/sticky.min.js',
     bo+'wow/dist/wow.min.js',
@@ -80,7 +80,7 @@ gulp.task('icons', function() { 
 // -------------------------WATCHERS----------------------------
 gulp.task('default', ['sass','icons','scripts'], function() {
     gulp.watch(['scss/**/*.scss'], ['sass']);
-    gulp.watch(['scripts/**/*.js'], ['scripts']);
+    gulp.watch(['scripts/**/*.*'], ['scripts']);
 });
 
 
