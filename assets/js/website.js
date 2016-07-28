@@ -105,6 +105,13 @@ $('document').ready(function(){
     "use strict";
     t.module("interface", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -130,7 +137,7 @@ function(t) {
             controller: n,
             controllerAs: "vm",
             link: e,
-            templateUrl: "scripts/interface/socialIcon.html",
+            templateUrl: "./interface/socialIcon.html",
             scope: {
                 socialIcon: "@",
                 socialLink: "@"
@@ -139,6 +146,13 @@ function(t) {
     }
     t.module("interface").directive("socialIcon", e), e.$inject = ["$timeout"]
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -151,7 +165,7 @@ function(t) {
             controller: t,
             controllerAs: "vm",
             restrict: "A",
-            templateUrl: "scripts/interface/navbarElement.html",
+            templateUrl: "./interface/navbarElement.html",
             scope: {
                 navbarElement: "@"
             }
@@ -159,6 +173,13 @@ function(t) {
     }
     t.module("interface").directive("navbarElement", e)
 }(window.angular),
+
+
+
+
+
+
+
 function(t, e) {
     "use strict";
 
@@ -180,16 +201,29 @@ function(t, e) {
             controllerAs: "vm",
             restrict: "AE",
             link: e,
-            templateUrl: "scripts/interface/navbar.html",
+            templateUrl: "./interface/navbar.html",
             scope: !1
         }
     }
     t.module("interface").directive("navbar", n), n.$inject = ["$timeout"]
 }(window.angular, window.document),
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("timeline", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -216,10 +250,24 @@ function(t) {
     }
     t.module("timeline").directive("timeline", e)
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("skills", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -234,6 +282,13 @@ function(t) {
     }
     t.module("skills").directive("skillElement", e)
 }(window.angular),
+
+
+
+// -------------------------------------------------------------------------------------------------
+
+
+
 function(t) {
     "use strict";
 
@@ -250,8 +305,15 @@ function(t) {
         };
         return i
     }
-    t.module("skills").factory("skill", e), e.$inject = ["$http", "ELH_SITE"]
+    t.module("skills").factory("skill", e), e.$inject = ["$http", "TB_SITE"]
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -278,10 +340,24 @@ function(t) {
     }
     t.module("skills").directive("skills", e)
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("projects", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -298,8 +374,15 @@ function(t) {
         };
         return i
     }
-    t.module("projects").factory("project", e), e.$inject = ["$http", "ELH_SITE"]
+    t.module("projects").factory("project", e), e.$inject = ["$http", "TB_SITE"]
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -326,14 +409,35 @@ function(t) {
     }
     t.module("projects").directive("projects", e)
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("posts", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("education", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
 
@@ -350,26 +454,54 @@ function(t) {
         };
         return i
     }
-    t.module("education").factory("education", e), e.$inject = ["$http", "ELH_SITE"]
+    t.module("education").factory("education", e), e.$inject = ["$http", "TB_SITE"]
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("config", [])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     var e = {
-        version: "5.0.0",
+        version: "1.0.0",
         name: "THOMAS BATT website",
         author: "BATT <thomasbatt@gmail.com>",
         api: "http://localhost:1234/api"
     };
-    t.module("config").constant("ELH_SITE", e)
+    t.module("config").constant("TB_SITE", e)
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     "use strict";
     t.module("website", ["angular-parallax", "duScroll", "ngTooltip", "sticky", "config", "education", "interface"])
 }(window.angular),
+
+
+
+
+
+
+
 function(t) {
     try {
         t = angular.module("website")
@@ -377,7 +509,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-modal" offset="120" data-modal-id="contacter">contact</a> </li></ul>')
+        t.put("./interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-modal" offset="120" data-modal-id="contacter">contact</a> </li></ul>')
     }])
 }(),
 function(t) {
@@ -387,7 +519,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/navbarElement.html", '<a class="brackets_links" offset="120" du-scrollspy du-smooth-scroll="{{:: vm.anchor }}">{{:: vm.title }}</a>')
+        t.put("./interface/navbarElement.html", '<a class="brackets_links" offset="120" du-scrollspy du-smooth-scroll="{{:: vm.anchor }}">{{:: vm.title }}</a>')
     }])
 }(),
 function(t) {
@@ -397,7 +529,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/socialIcon.html", '<a ng-href="{{:: vm.link }}" target="_blank"><img ng-src="./assets/images/icons/{{:: vm.icon }}.png" class="social-img {{:: vm.class }}" alt="{{:: vm.alt }}"></a>')
+        t.put("./interface/socialIcon.html", '<a ng-href="{{:: vm.link }}" target="_blank"><img ng-src="./assets/images/icons/{{:: vm.icon }}.png" class="social-img {{:: vm.class }}" alt="{{:: vm.alt }}"></a>')
     }])
 }(),
 function(t) {
@@ -407,7 +539,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/skillElement.html", '<i title="{{ techno }}" class="devicon-{{ techno | lowercase }}-plain colored"></i>')
+        t.put("./skills/skillElement.html", '<i title="{{ techno }}" class="devicon-{{ techno | lowercase }}-plain colored"></i>')
     }])
 }(),
 function(t) {
@@ -417,7 +549,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/skills.html", '<div class="col-s-12 col-m-4"><h3>Development</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'dev\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Tools I use(d)</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'tool\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Sys admin</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'sys\'" skill="skill.techno"></skill-element></div>')
+        t.put("./skills/skills.html", '<div class="col-s-12 col-m-4"><h3>Development</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'dev\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Tools I use(d)</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'tool\'" skill="skill.techno"></skill-element></div><div class="col-s-12 col-m-4"><h3>Sys admin</h3><skill-element ng-repeat="skill in skills" ng-if="skill.type === \'sys\'" skill="skill.techno"></skill-element></div>')
     }])
 }(),
 function(t) {
@@ -427,7 +559,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/timeline.html", '<div class="content"><h2>Timeline</h2></div>')
+        t.put("./timeline/timeline.html", '<div class="content"><h2>Timeline</h2></div>')
     }])
 }(),
 function(t) {
@@ -437,6 +569,6 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("scripts/interface/projects.html", '<div class="project col-s-12" ng-repeat="project in vm.projects"><div class="col-m-4 visible-m"><div class="border">{{:: project.icon }}</div></div><div class="description col-m-8">{{:: project.name }}<p>{{:: project.description }} <i ng-if="{{:: project.link  }}" class="devicons devicons-responsive"></i><a ng-href="{{: project.link }}">Demo</a><br><i ng-if="{{:: project.github }}" class="devicons devicons-github"></i><a ng-href="{{:: project.github }}">Github</a><br><skill-element ng-repeat="techno in project.technologies" skill="techno"></skill-element></p></div></div>')
+        t.put("./projects/projects.html", '<div class="project col-s-12" ng-repeat="project in vm.projects"><div class="col-m-4 visible-m"><div class="border">{{:: project.icon }}</div></div><div class="description col-m-8">{{:: project.name }}<p>{{:: project.description }} <i ng-if="{{:: project.link  }}" class="devicons devicons-responsive"></i><a ng-href="{{: project.link }}">Demo</a><br><i ng-if="{{:: project.github }}" class="devicons devicons-github"></i><a ng-href="{{:: project.github }}">Github</a><br><skill-element ng-repeat="techno in project.technologies" skill="techno"></skill-element></p></div></div>')
     }])
 }();

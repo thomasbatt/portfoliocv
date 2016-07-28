@@ -26,19 +26,20 @@
 - [angular](https://github.com/angular)
 
 
-### Installation
+### Installation 
 
 Pour installer faites simplement les commandes suivantes:
 
-- NPM
 
 ```bash
-   $ npm install
+  	$ npm install
+  	$ bower install
 ```
 
-- Bower
+et lancez
 
 ```bash
-   $ bower install
+	$ gulp 
 ```
 
+La tache par defaut instale les fichiers de styles, fonts et scripts puis surveille les sources pour injecter les modifications apportées. 
