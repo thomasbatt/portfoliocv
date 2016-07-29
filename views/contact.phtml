@@ -1,36 +1,27 @@
 <div id="contacter" class="wow fadeInUpBig modal-box <?=htmlentities($display_page['contact'])?> row">
-    <div class="col-xs-6">
-        <header> <a href="#" class="js-modal-close close">×</a>
-            <h3>Un projet a me soumettre?</h3>
-        </header>
-    </div>
-    <div class="col-xs-6">
+    <div class="col-xs-12">
         <header> <a href="#" class="js-modal-close close">×</a>
             <h3>Un projet a me soumettre?</h3>
         </header>
     </div>
     <div class="col-xs-12">
         <div class="row">
-            <div class="col-xs-6">
+            <div class="col-xs-12">
                 <!-- <strong><span class="titre-article">Un projet a me soumettre?</span></strong> -->
-                Contactez moi par mail en remplissant le formulaire ci-dessous.
-                <br/>
+                <div class="subtitle-contact">Contactez moi par mail en remplissant le formulaire ci-dessous.</div>
             </div>
-            <div class="col-xs-6">
-                <!-- <strong><span class="titre-article">Un projet a me soumettre?</span></strong> -->
-                Contactez moi par mail en remplissant le formulaire ci-dessous.
-                <br/>
-            </div>
-            <form method="post" id="form" class="form container" action="contact" enctype="multipart/form-data" >
+            <form method="post" id="form" class="form container col-xs-12" action="contact" enctype="multipart/form-data" >
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-xs-12">
                         <?php require('views/contact_error.phtml') ?>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-md-6 col-xs-12">
                         <div class="checkbox checkbox_send_copy ">
                             <input type="checkbox" value="1" name="send_copy" id="send_copy" />
                             <label for="send_copy">M'envoyer une copie</label>
                         </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
                         <div class="input input_submit js_submit_contact ">
                             <input type="hidden" value="send_mail" name="action"/>
                             <input type="submit" value="Envoyer" class="submit" />

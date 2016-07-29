@@ -5,8 +5,9 @@ var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');  
 var rename = require('gulp-rename');  
 var uglify = require('gulp-uglify'); 
-var lazypipe = require('lazypipe'); 
+var lazypipe = require('lazypipe');
 
+var bower = require('./bower');
 var bo = 'bower_components/'; 
 
 
@@ -84,9 +85,9 @@ gulp.task('buildAngular', function() {
         .pipe(plugins.ngHtml2js, {
             moduleName: bower.name,
             prefix: '/' + bower.name + '/',
-            stripPrefix: '/scripts/app'
+            stripPrefix: '/scripts'
         })
-        .pipe(plugins.concat, bower.name + '-templates.js')
+        .pipe(concat, bower.name + '-templates.js')
         .pipe(gulp.dest, 'scripts/')
         // .pipe(livereload)();
 });

@@ -42,9 +42,14 @@
     }
   }
   header {
+    padding-left: 15px;
     h3, h4 {
+
       margin: 0;
     }
+  }
+  .subtitle-contact{
+    margin-left: 10px;
   }
   .modal-body {
     padding: 2em 1.5em;
@@ -52,8 +57,9 @@
   .modal-footer, footer {
     padding: 1em;
     border-top: 1px solid #ddd;
-    background: rgba(0, 0, 0, 0.02);
+    // background: rgba(0, 0, 0, 0.02);
     text-align: right;
+    margin-top: 20px;
   }
 }
 
@@ -84,4 +90,13 @@ a.close {
     -moz-transition: color 1s ease;
     transition: color 1s ease;
   }
+}
+
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
 }
