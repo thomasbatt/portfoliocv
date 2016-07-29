@@ -5,6 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var concat = require('gulp-concat');  
 var rename = require('gulp-rename');  
 var uglify = require('gulp-uglify'); 
+var lazypipe = require('lazypipe'); 
 
 var bo = 'bower_components/'; 
 
@@ -19,7 +20,7 @@ var sassPaths = [
     bo+'font-awesome/scss'
 ];
 gulp.task('sass', function() {
-    gulp.src('scss/website.scss')
+    gulp.src('scss/app.scss')
         .pipe(plugins.sass({
             includePaths: sassPaths
         })
@@ -46,7 +47,7 @@ gulp.task('sass', function() {
 
 
 // -----------------------JS ASSETS---------------------------
-var scriptFiles = [
+var jsVendorsFiles = [
     bo+'angular/angular.min.js',
     'scripts/vendors/angular-rc.min.js',
     bo+'jquery/dist/jquery.min.js',
@@ -55,9 +56,10 @@ var scriptFiles = [
     bo+'elh-tooltip/tooltip.js',
 ];
 gulp.task('scripts', function() { 
-    gulp.src('scripts/website.js') 
+    gulp.src(['scripts/scripts.js','scripts/vendors/website-templates.js']) 
+        .pipe(concat('website.js'))
         .pipe(gulp.dest('assets/js')); 
-    gulp.src(scriptFiles)
+    gulp.src(jsVendorsFiles)
         .pipe(concat('vendors.min.js'))
         // .pipe(uglify())
         .pipe(gulp.dest('assets/js'));
@@ -84,10 +86,10 @@ gulp.task('buildAngular', function() {
             prefix: '/' + bower.name + '/',
             stripPrefix: '/scripts/app'
         })
-        .pipe(g.concat, bower.name + '-templates.js')
+        .pipe(plugins.concat, bower.name + '-templates.js')
         .pipe(gulp.dest, 'scripts/')
         // .pipe(livereload)();
-}
+});
 
 
 // -------------------------WATCHERS----------------------------

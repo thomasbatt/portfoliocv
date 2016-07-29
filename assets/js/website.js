@@ -30,7 +30,7 @@ $('document').ready(function(){
         });
     });
 
-// ---------------------THUMBNAIL HOVER--------------------------
+// ---------------------THUMBNAIL--------------------------------
     $("a.gallery-item").next("br")
         .remove();
     $("a.gallery-item").mouseover(function(e){
@@ -113,6 +113,8 @@ $('document').ready(function(){
 
     new WOW().init();
 });
+
+
 
 
 
