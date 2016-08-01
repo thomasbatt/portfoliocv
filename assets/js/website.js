@@ -82,33 +82,56 @@ $('document').ready(function(){
     });
 
 // ------------------------------MODAL--------------------------------
+    
+        // $('.contact').hide();
+    // $('.button-close').click(function(e){
+    //     e.preventDefault();
+    //     contact.fadeOut();
+    // });
+
+    $('.js-open-modal').click(function(e){
+        e.preventDefault();
+    var contact = $('.contact');
+        contact.fadeIn();
+        $.get('index.php/contact', function(page) {
+            contact.html(page);
+            $('.button-close').click(function(e){
+                e.preventDefault();
+                contact.fadeOut();
+            });
+        })
+    });
+
+
+
     $(function(){
         var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
         $('a[data-modal-id]').click(function(e) {
+            
             e.preventDefault();
             $(".modal-box").css({
                 top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
                 left: ($(window).width() - $(".modal-box").outerWidth()) / 2
             });
-        $("body").append(appendthis);
-        $(".modal-overlay").fadeTo(500, 0.7);
-            var modalBox = $(this).attr('data-modal-id');
-            $('#'+modalBox).fadeIn($(this).data());
-        });  
-        $(".js-modal-close, .modal-overlay").click(function() {
-            $(".modal-box, .modal-overlay").fadeOut(500, function() {
-                $(".modal-overlay").remove();
-
+            $("body").append(appendthis);
+            $(".modal-overlay").fadeTo(500, 0.7);
+                var modalBox = $(this).attr('data-modal-id');
+                $('#'+modalBox).fadeIn($(this).data());
+            });  
+            $(".js-modal-close, .modal-overlay").click(function() {
+                $(".modal-box, .modal-overlay").fadeOut(500, function() {
+                    $(".modal-overlay").remove();
+                });
             });
-        });
-        $(window).resize(function() {
-            $(".modal-box").css({
-                top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
-                left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+            $(window).resize(function() {
+                $(".modal-box").css({
+                    top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
+                    left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+                });
             });
-        });
         $(window).resize();
     });
+    
 // ----------------------------WOW JS--------------------------------
 
     new WOW().init();
