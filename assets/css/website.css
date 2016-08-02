@@ -507,12 +507,10 @@ strong {
   margin: 0 auto;
   float: none; }
 
-.row {
-  margin: 0 -10px; }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .row::before, .row::after {
   display: block; }
@@ -945,85 +943,77 @@ pre {
   border-width: 5px 5px 0;
   border-color: #242A28 transparent transparent; }
 
-.js-contact-error label {
-  padding-top: 8px; }
-
-.js-contact-error input {
-  width: 95%;
-  padding: 5px 10px;
-  -webkit-box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
-          box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
-  line-height: 1; }
-
-.js-contact-error textarea {
-  width: 95%;
-  padding: 5px 10px;
-  -webkit-box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
-          box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
-  line-height: 1;
-  height: 170px;
-  resize: none; }
-
-.js-contact-error .error {
-  color: #F68C76;
-  font-size: 1.5rem; }
-
-.checkbox_send_copy {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 5px; }
-  .checkbox_send_copy input {
-    margin-left: 0 !important; }
-  .checkbox_send_copy label {
-    margin-left: 10px; }
-
-.js_submit_contact {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-  .js_submit_contact input {
-    cursor: pointer; }
-
 .l-modals .contact {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100%;
-  z-index: 2;
+  z-index: 2000;
   background: rgba(0, 0, 0, 0.3);
   display: none; }
-  .l-modals .contact-content {
+  .l-modals .contact-body {
     position: absolute;
-    max-width: 60%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
+    max-width: 900px;
+    min-width: 400px;
+    top: 0;
+    left: 0;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    text-align: center;
-    z-index: 2;
+    padding: 40px  20px;
+    z-index: 2001;
     background: #fff; }
-  .l-modals .contact h3 {
-    margin-top: 10px; }
-  .l-modals .contact figure {
-    float: left; }
-    .l-modals .contact figure img {
-      max-width: 40px; }
-  .l-modals .contact .button-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer; }
-    .l-modals .contact .button-close i {
-      font-size: 25px; }
-  .l-modals .contact p {
-    padding: 10px 0; }
-  .l-modals .contact address {
-    text-align: center;
+  .l-modals .contact-header {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd; }
+    .l-modals .contact-header .title {
+      font-weight: 600;
+      display: inline-block;
+      padding-right: 20px; }
+    .l-modals .contact-header .subtitle {
+      display: inline-block; }
+    .l-modals .contact-header .button-close {
+      display: inline-block; }
+      .l-modals .contact-header .button-close i {
+        position: absolute;
+        top: -25px;
+        right: -5px;
+        cursor: pointer;
+        font-size: 25px; }
+  .l-modals .contact-content .js-contact-error label {
+    font-weight: normal;
+    padding-top: 8px;
+    margin-bottom: 0; }
+  .l-modals .contact-content .js-contact-error input {
+    width: 95%;
+    padding: 5px 10px;
+    -webkit-box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
+            box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
+    line-height: 1; }
+  .l-modals .contact-content .js-contact-error textarea {
+    width: 95%;
+    padding: 5px 10px;
+    -webkit-box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
+            box-shadow: 0 0 5px rgba(204, 204, 204, 0.6) inset;
+    line-height: 1;
+    height: 160px;
+    resize: none; }
+  .l-modals .contact-content .js-contact-error .error {
+    color: #F68C76;
+    font-size: 1.5rem; }
+  .l-modals .contact-content .checkbox_send_copy {
+    margin-top: 10px;
     margin-bottom: 10px; }
+    .l-modals .contact-content .checkbox_send_copy input {
+      margin-left: 0 !important; }
+    .l-modals .contact-content .checkbox_send_copy label {
+      margin-left: 10px; }
+  .l-modals .contact-content .js_submit_contact {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .l-modals .contact-content .js_submit_contact input {
+      cursor: pointer; }
 
 .l-modals .display-block {
   display: block; }

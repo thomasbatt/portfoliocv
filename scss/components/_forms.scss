@@ -1,47 +1,13 @@
-@mixin field(){
+@mixin forms-field(){
 	width: 95%;
 	padding: 5px 10px;
 	box-shadow: 0 0 5px rgba(#CCC, .6) inset;
     line-height: 1;
 }
 
-.js-contact-error{
-	label{
-		padding-top: 8px;
-		// font-weight: normal;
-	}
-	input{
-		@include field();
-	}
-	textarea{
-		@include field();
-    	height: 170px;
-    	resize: none;
-	}
-	.error{
-		color: #F68C76;
-		font-size: 1.5rem; 	
-	}
-}
-
-@mixin bottomfield(){
+@mixin forms-bottomfield(){
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.checkbox_send_copy{
-	@include bottomfield();
-	margin-left: 5px;
-	input{
-		margin-left: 0 !important;
-	}
-	label{
-		margin-left: 10px;
-	}
-}
-.js_submit_contact{
-	@include bottomfield();
-	input{
-	    cursor: pointer;
-	}
-}
+

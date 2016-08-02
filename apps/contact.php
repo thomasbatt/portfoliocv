@@ -5,5 +5,5 @@
         if (!isset($_SESSION[$field]))
         	$_SESSION[$field] = "";
     }
-	require('views/contact.phtml');
+	require('views/contact2.phtml');
 ?>
