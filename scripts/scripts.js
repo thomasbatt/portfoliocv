@@ -93,13 +93,11 @@ $('document').ready(function(){
 
     $('.js-open-modal').click(function(e){
         e.preventDefault();
+        contact.fadeIn();
         $('.contact-body').css({
             top: ($(window).height() - $(".contact-body").outerHeight()) / 2 , 
             left: ($(window).width() - $(".contact-body").outerWidth()) / 2
-            // top: 20+'%', 
-            // left: 20+'%' 
         });
-        contact.fadeIn();
     });
         $('.button-close').click(function(e){
             e.preventDefault();
@@ -126,7 +124,6 @@ $('document').ready(function(){
     // $(function(){
     //     var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
     //     $('a[data-modal-id]').click(function(e) {
-            
     //         e.preventDefault();
     //         $(".modal-box").css({
     //             top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
@@ -134,20 +131,20 @@ $('document').ready(function(){
     //         });
     //         $("body").append(appendthis);
     //         $(".modal-overlay").fadeTo(500, 0.7);
-    //             var modalBox = $(this).attr('data-modal-id');
-    //             $('#'+modalBox).fadeIn($(this).data());
-    //         });  
-    //         $(".js-modal-close, .modal-overlay").click(function() {
-    //             $(".modal-box, .modal-overlay").fadeOut(500, function() {
-    //                 $(".modal-overlay").remove();
-    //             });
-    //         });
-    //         $(window).resize(function() {
-    //             $(".modal-box").css({
-    //                 top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
-    //                 left: ($(window).width() - $(".modal-box").outerWidth()) / 2
-    //             });
-    //         });
+//             var modalBox = $(this).attr('data-modal-id');
+//             $('#'+modalBox).fadeIn($(this).data());
+    //     });  
+//         $(".js-modal-close, .modal-overlay").click(function() {
+//             $(".modal-box, .modal-overlay").fadeOut(500, function() {
+//                 $(".modal-overlay").remove();
+//             });
+//         });
+//         $(window).resize(function() {
+//             $(".modal-box").css({
+//                 top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
+//                 left: ($(window).width() - $(".modal-box").outerWidth()) / 2
+//             });
+//         });
     //     $(window).resize();
     // });
     
