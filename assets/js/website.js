@@ -87,6 +87,7 @@ $('document').ready(function(){
     $('.button-close').click(function(e){
         e.preventDefault();
         $('.contact').fadeOut();
+        $('.sendmailsuccess').fadeOut();
     });
 
     

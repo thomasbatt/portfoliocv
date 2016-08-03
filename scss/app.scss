@@ -6,13 +6,13 @@
 
 // ---------------LAYOUT------------
 @import "layout/header",
+		"layout/nav",
 		"layout/content",
 		"layout/home",
 		"layout/footer";
 
 // --------------COMPONENTS------------
-@import "components/devicon-conf",
-		"components/tooltip",
+@import "components/tooltip",
 		"components/forms",
 		"components/modal";
 

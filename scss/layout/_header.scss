@@ -1,135 +1,109 @@
 .l-header {
-  height: 100vh;
-  background: url(../img/DSC_0074.jpg);
-  background-size: cover;
-  color: $textColor2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .wrapper {
-    .logo {
-      width: 80px;
-      height: 80px;
-      background: 0 0;
-      border: 2px solid $lightColor;
-      margin: 0 auto;
-      overflow: hidden;
-      img {
-        width: 80px;
-        height: 80px;
-      }
-    }
-    h1 {
-      margin-top: 50px;
-    }
-    .separator {
-      margin: 0 auto;
-      content: ' ';
-      background-color: $bgColor2;
-      height: 2px;
-      width: 25vw;
-    }
-    .desc {
-      font-size: .8em;
-      margin-bottom: 50px;
-    }
-    .btn {
-      cursor: pointer;
-    }
-  }
-}
-
-.l-nav {
-  min-height: 60px;
-  background: $bgColor;
-  &.nav-header {
-    height: 60px;
-  }
-  &.open {
-    .nav-bar {
-      transform: scale(1, 1);
-      opacity: 1;
-      height: 153px;
-    }
-    .title {
-      display: none;
-    }
-  }
-  &.shadow {
-    box-shadow: 0 1px 3px $textColor;
-  }
-  .hamburger {
-    position: absolute;
-    display: block;
-    float: left;
-    width: 60px;
-    height: 60px;
-    z-index: 10;
-    cursor: pointer;
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 1rem;
-      height: 0;
-      top: 15px;
-      left: 22px;
-      box-shadow: 0 10px 0 1px #000, 0 16px 0 1px #000, 0 22px 0 1px #000;
-    }
-  }
-  .title {
-    display: block;
-    position: absolute;
-    float: right;
-    height: 60px;
-    line-height: 60px;
-    right: 22px;
-  }
-  .nav-bar {
-    transform-origin: top;
-    animation-fill-mode: forwards;
-    transform: scale(1, 0);
-    transition: all .5s linear;
-    height: 0;
-    margin: 0;
-    padding-left: 60px;
-    li {
-      display: block;
-      list-style: none;
-      text-align: right;
-      border-bottom: 1px solid $textColor;
-      &:last-child {
-        border: none;
-      }
-      &:hover {
-        border-color: $textColor2;
-      }
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 13px;
-        &:hover {
-          color: $textColor2;
-          border-color: $textColor2;
+    height: 100vh;
+    background: url(../img/DSC_0074.jpg);
+    background-size: cover;
+    color: $textColor2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wrapper {
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: 0 0;
+            border: 2px solid $lightColor;
+            margin: 0 auto;
+            overflow: hidden;
+            img {
+            width: 80px;
+            height: 80px;
+            }
         }
-      }
+        h1 {
+            margin-top: 50px;
+        }
+        .separator {
+            margin: 0 auto;
+            content: ' ';
+            background-color: $bgColor2;
+            height: 2px;
+            width: 25vw;
+        }
+        .desc {
+            font-size: .8em;
+            margin-bottom: 50px;
+        }
+        .btn {
+            cursor: pointer;
+        }
     }
-  }
+
+    .main {
+        &-nav a, .posts-list time, .button, &-footer, .projects-list span, .section-subtitle, figcaption, h1, h2, h3, h4, h5, h6 {
+            font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+        }
+        &-subtitle {
+              font-family: 'Playfair Display', Georgia, serif;
+              font-style: italic;
+              display: block;
+              color: $textHomeColor;
+        }
+
+        &-title {
+              font-family: 'Playfair Display', Georgia, serif;
+              font-style: italic;
+              display: block;
+              color: $textHomeColor;
+              font-size: 58px;
+              line-height: 52px;
+              font-weight: 700;
+              margin-bottom: 15px;
+        }
+
+        &-subtitle {
+              font-size: 30px;
+              line-height: 32px;
+              font-weight: 400;
+        }
+
+        &-nav a, .button {
+              color: $textHomeColor;
+              border: 2px solid $textHomeColor;
+        }
+
+        &-nav {
+            a {
+                &.selected, &:hover {
+                    background: $textHomeColor;
+                    color: #291A03;
+                }
+                font-size: 14px;
+                line-height: 14px;
+                padding: 12px 24px 11px;
+                display: inline-block;
+                margin: 7px;
+                text-transform: uppercase;
+            }
+            margin-top: 35px;
+        }
+    }
+
+    .scrollDownArrow {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -6px;
+        margin-bottom: 15px;
+        a {
+        color: $textHomeColor;
+        cursor: pointer;
+            .glyphicon {
+                font-size: 5rem;
+                -webkit-animation: scrolldown 1.5s infinite;
+                animation: scrolldown 1.5s infinite;
+            }
+        }
+    }
 }
 
-@keyframes nav-bar {
-  0% {
-    display: none;
-    height: 0;
-  }
-
-  1% {
-    display: block;
-    height: 0;
-  }
-
-  100% {
-    height: 255px;
-  }
-}

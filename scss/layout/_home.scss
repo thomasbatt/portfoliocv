@@ -1,51 +1,4 @@
-.main-nav a, .posts-list time, .button, .main-footer, .projects-list span, .section-subtitle, figcaption, h1, h2, h3, h4, h5, h6 {
-  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
-}
 
-.main-subtitle {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  display: block;
-  color: $textHomeColor;
-}
-
-.main-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-style: italic;
-  display: block;
-  color: $textHomeColor;
-  font-size: 58px;
-  line-height: 52px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.main-subtitle {
-  font-size: 30px;
-  line-height: 32px;
-  font-weight: 400;
-}
-
-.main-nav a, .button {
-  color: $textHomeColor;
-  border: 2px solid $textHomeColor;
-}
-
-.main-nav {
-  a {
-    &.selected, &:hover {
-      background: $textHomeColor;
-      color: #291A03;
-    }
-    font-size: 14px;
-    line-height: 14px;
-    padding: 12px 24px 11px;
-    display: inline-block;
-    margin: 7px;
-    text-transform: uppercase;
-  }
-  margin-top: 35px;
-}
 
 .button {
   font-size: 14px;
@@ -75,46 +28,6 @@
   z-index: 5;
 }
 
-small {
-  font-size: 60%;
-}
-
-h1 {
-  font-size: 1.5em;
-}
-
-h2 {
-  font-size: 1.325em;
-}
-
-h3 {
-  font-size: 1.25em;
-}
-
-h4 {
-  font-size: 1.125em;
-}
-
-h5, h6 {
-  font-size: 1em;
-}
-
-ul {
-  list-style: square inside;
-}
-
-ol ol, ul ol {
-  list-style: lower-roman inside;
-}
-
-ol ul, ul ul {
-  list-style: disc inside;
-  margin-bottom: 0;
-}
-
-ol {
-  list-style: decimal inside;
-}
 
 blockquote {
   margin-left: 45px;
@@ -142,27 +55,6 @@ pre {
   border-radius: 5px;
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.no-bullet {
-  list-style: none;
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.preload, .visible-l, .visible-m {
-  display: none;
-}
 
 
 @keyframes title {
