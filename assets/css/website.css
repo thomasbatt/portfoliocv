@@ -954,10 +954,14 @@ pre {
   display: none; }
   .l-modals .contact-body {
     position: absolute;
-    max-width: 900px;
-    min-width: 400px;
-    top: 0;
-    left: 0;
+    max-width: 1000px;
+    min-width: 250px;
+    width: 80%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
     -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
     padding: 40px  20px;
@@ -1197,3 +1201,7 @@ pre {
   .col-l-center {
     margin: 0 auto;
     float: none; } }
+
+@media (min-width: 32em) {
+  .contact-body {
+    width: 70%; } }

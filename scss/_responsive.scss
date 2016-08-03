@@ -198,3 +198,9 @@
     float: none;
   }
 }
+
+@media (min-width: 32em) {
+  .contact-body {
+    width: 70%;
+  }
+}

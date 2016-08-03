@@ -2,9 +2,8 @@
 $('document').ready(function(){ 
 
 // ------------------------AJAX---------------------------
-    $('.js_submit_contact').click(function(evenement)
-    {
-        evenement.preventDefault();
+    $('.js_submit_contact').click(function(e){
+        e.preventDefault();
         var name = $(this).parents('form').find('[name="name"]').val();
         var email = $(this).parents('form').find('[name="email"]').val();
         var subject = $(this).parents('form').find('[name="subject"]').val();
@@ -31,8 +30,7 @@ $('document').ready(function(){
     });
 
 // ---------------------THUMBNAIL--------------------------------
-    $("a.gallery-item").next("br")
-        .remove();
+    $("a.gallery-item").next("br").remove();
     $("a.gallery-item").mouseover(function(e){
         $("body").append("<img class='features-hover' src='"+$(this).attr("rel")+"' alt='' />");
         $("img.features-hover").css({
@@ -82,71 +80,15 @@ $('document').ready(function(){
     });
 
 // ------------------------------MODAL--------------------------------
-    
-        // $('.contact').hide();
-    // $('.button-close').click(function(e){
-    //     e.preventDefault();
-    //     contact.fadeOut();
-    // });
-
-    var contact = $('.contact');
-
-    $('.js-open-modal').click(function(e){
+    $('.js-open-contact').click(function(e){
         e.preventDefault();
-        contact.fadeIn();
-        $('.contact-body').css({
-            top: ($(window).height() - $(".contact-body").outerHeight()) / 2 , 
-            left: ($(window).width() - $(".contact-body").outerWidth()) / 2
-        });
+        $('.contact').fadeIn();
     });
-        $('.button-close').click(function(e){
-            e.preventDefault();
-            contact.fadeOut();
-        });
-        $(window).resize(function() {
-            $(".contact-body").css({
-                top: ($(window).height() - $(".contact-body").outerHeight()) / 2 , 
-                left: ($(window).width() - $(".contact-body").outerWidth()) / 2
-            });
-        console.log(($(window).height() - $(".contact-body").outerHeight()) / 2 + $(window).scrollTop());
-        console.log(($(window).width() - $(".contact-body").outerWidth()) / 2);
-        });
-        $(window).resize();
+    $('.button-close').click(function(e){
+        e.preventDefault();
+        $('.contact').fadeOut();
+    });
 
-            // contact.click(function(e){
-            //     e.preventDefault();
-            //     contact.fadeOut();
-            // });
-        // })
-
-
-
-    // $(function(){
-    //     var appendthis =  ("<div class='modal-overlay js-modal-close'></div>");
-    //     $('a[data-modal-id]').click(function(e) {
-    //         e.preventDefault();
-    //         $(".modal-box").css({
-    //             top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
-    //             left: ($(window).width() - $(".modal-box").outerWidth()) / 2
-    //         });
-    //         $("body").append(appendthis);
-    //         $(".modal-overlay").fadeTo(500, 0.7);
-//             var modalBox = $(this).attr('data-modal-id');
-//             $('#'+modalBox).fadeIn($(this).data());
-    //     });  
-//         $(".js-modal-close, .modal-overlay").click(function() {
-//             $(".modal-box, .modal-overlay").fadeOut(500, function() {
-//                 $(".modal-overlay").remove();
-//             });
-//         });
-//         $(window).resize(function() {
-//             $(".modal-box").css({
-//                 top: ($(window).height() - $(".modal-box").outerHeight()) / 2 + $(window).scrollTop() , 
-//                 left: ($(window).width() - $(".modal-box").outerWidth()) / 2
-//             });
-//         });
-    //     $(window).resize();
-    // });
     
 // ----------------------------WOW JS--------------------------------
 
