@@ -42,6 +42,22 @@
         &-nav a, .posts-list time, .button, &-footer, .projects-list span, .section-subtitle, figcaption, h1, h2, h3, h4, h5, h6 {
             font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
         }
+        &-nav {
+            display: none;
+            margin-top: 35px;
+            a {
+                &.selected, &:hover {
+                    background: $textHomeColor;
+                    color: #291A03;
+                }
+                font-size: 14px;
+                line-height: 14px;
+                padding: 12px 24px 11px;
+                display: inline-block;
+                margin: 7px;
+                text-transform: uppercase;
+            }
+        }
         &-subtitle {
               font-family: 'Playfair Display', Georgia, serif;
               font-style: italic;
@@ -71,24 +87,10 @@
               border: 2px solid $textHomeColor;
         }
 
-        &-nav {
-            a {
-                &.selected, &:hover {
-                    background: $textHomeColor;
-                    color: #291A03;
-                }
-                font-size: 14px;
-                line-height: 14px;
-                padding: 12px 24px 11px;
-                display: inline-block;
-                margin: 7px;
-                text-transform: uppercase;
-            }
-            margin-top: 35px;
-        }
     }
 
     .scrollDownArrow {
+        transform: translateX(-20px);
         display: block;
         position: absolute;
         bottom: 0;
