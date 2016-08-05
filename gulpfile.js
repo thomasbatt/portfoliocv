@@ -58,10 +58,8 @@ var jsVendorsFiles = [
     'scripts/vendors/tooltip.min.js',
 ];
 var jsWebsiteFiles = [
-    // 'scripts/interface/**.js',
+    'scripts/interface/**.js',
     'scripts/**.js',
-    // 'scripts/vendors/website-templates.js',
-
 ];
 gulp.task('scripts', function() { 
     gulp.src(jsWebsiteFiles) 
@@ -84,19 +82,6 @@ var iconsFiles = [
 gulp.task('icons', function() { 
     return gulp.src(iconsFiles) 
         .pipe(gulp.dest('assets/fonts')); 
-});
-
- // --------------------Build AngularJS --------------------------
-gulp.task('buildAngular', function() {
-    return lazypipe()
-        .pipe(plugins.ngHtml2js, {
-            moduleName: bower.name,
-            prefix: '/' + bower.name + '/',
-            stripPrefix: '/scripts'
-        })
-        .pipe(concat, bower.name + '-templates.js')
-        .pipe(gulp.dest, 'scripts/')
-        // .pipe(livereload)();
 });
 
 

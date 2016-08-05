@@ -1,4 +1,3 @@
-
 function(t) {
     "use strict";
 
