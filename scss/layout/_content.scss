@@ -70,7 +70,8 @@
 
 // ----------------------------COMPETENCES---------------------
     .skills {
-        margin: 0 10px;
+        margin: 10px 10px;
+        padding: 10px 0;
         text-align: center;
         background: $skillsColor;
         z-index: 1;
@@ -243,22 +244,17 @@
     .col-s-12 {
         width: 100%;
     }
+
+    .visible-s {
+        display: block;
+    }
+    .visible-l, .visible-m {
+        display: none;
+    }
 }
 
-@keyframes title {
-  0% {
-    display: block;
-    opacity: 1;
-  }
 
-  99% {
-    opacity: 0;
-  }
 
-  100% {
-    display: none;
-  }
-}
 
 // ---------------------js RTHUMBNAIL-------------------
 
@@ -268,7 +264,7 @@
 .features-hover {
     display: none ;
     position: absolute;
-    transform: translateX(-2000px);
+    transform: translateX(-230px) translateY(200px);
     padding: 8px;
     background: $bgColor;
     -webkit-border-radius: 8px;

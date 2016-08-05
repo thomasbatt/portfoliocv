@@ -50,14 +50,21 @@ gulp.task('sass', function() {
 // -----------------------JS ASSETS---------------------------
 var jsVendorsFiles = [
     bo+'angular/angular.min.js',
-    'scripts/vendors/angular-rc.min.js',
+    bo+'angular-parallax/scripts/angular-parallax.js',
+    bo+'angular-scroll/angular-scroll.min.js',
     bo+'jquery/dist/jquery.min.js',
     bo+'ngSticky/dist/sticky.min.js',
     bo+'wow/dist/wow.min.js',
-    bo+'elh-tooltip/tooltip.js',
+    'scripts/vendors/tooltip.min.js',
+];
+var jsWebsiteFiles = [
+    // 'scripts/interface/**.js',
+    'scripts/**.js',
+    // 'scripts/vendors/website-templates.js',
+
 ];
 gulp.task('scripts', function() { 
-    gulp.src(['scripts/scripts.js','scripts/vendors/website-templates.js']) 
+    gulp.src(jsWebsiteFiles) 
         .pipe(concat('website.js'))
         .pipe(gulp.dest('assets/js')); 
     gulp.src(jsVendorsFiles)

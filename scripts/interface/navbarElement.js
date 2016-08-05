@@ -11,7 +11,7 @@ function(t) {
             controller: t,
             controllerAs: "vm",
             restrict: "A",
-            templateUrl: "./interface/navbarElement.html",
+            templateUrl: "views/navbarElement.phtml",
             scope: {
                 navbarElement: "@"
             }

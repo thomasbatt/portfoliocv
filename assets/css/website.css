@@ -399,13 +399,10 @@ pre {
     color: #FBE3C4;
     border: 2px solid #FBE3C4; }
   .l-header .scrollDownArrow {
-    -webkit-transform: translateX(-20px);
-        -ms-transform: translateX(-20px);
-            transform: translateX(-20px);
     display: block;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 45%;
     margin-left: -6px;
     margin-bottom: 15px; }
     .l-header .scrollDownArrow a {
@@ -413,8 +410,24 @@ pre {
       cursor: pointer; }
       .l-header .scrollDownArrow a .glyphicon {
         font-size: 5rem;
-        -webkit-animation: scrolldown 1.5s infinite;
-        animation: scrolldown 1.5s infinite; }
+        -webkit-animation: scrolldown 0.5s ease infinite alternate;
+                animation: scrolldown 0.5s ease infinite alternate; }
+
+@-webkit-keyframes scrolldown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); } }
+
+@keyframes scrolldown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); } }
 
 .l-nav {
   min-height: 60px;
@@ -426,7 +439,7 @@ pre {
         -ms-transform: scale(1, 1);
             transform: scale(1, 1);
     opacity: 1;
-    height: 153px; }
+    height: 210px; }
   .l-nav.open .title {
     display: none; }
   .l-nav.shadow {
@@ -488,6 +501,24 @@ pre {
         .l-nav .nav-bar li a:hover {
           color: #212121;
           border-color: #212121; }
+
+@-webkit-keyframes title {
+  0% {
+    display: block;
+    opacity: 1; }
+  99% {
+    opacity: 0; }
+  100% {
+    display: none; } }
+
+@keyframes title {
+  0% {
+    display: block;
+    opacity: 1; }
+  99% {
+    opacity: 0; }
+  100% {
+    display: none; } }
 
 @-webkit-keyframes nav-bar {
   0% {
@@ -576,7 +607,8 @@ pre {
           color: #7E8F7C;
           font-size: 0.8em; }
   .l-main .skills {
-    margin: 0 10px;
+    margin: 10px 10px;
+    padding: 10px 0;
     text-align: center;
     background: #ECECEC;
     z-index: 1; }
@@ -711,24 +743,10 @@ pre {
     padding: 10px; }
   .l-main .col-s-12 {
     width: 100%; }
-
-@-webkit-keyframes title {
-  0% {
-    display: block;
-    opacity: 1; }
-  99% {
-    opacity: 0; }
-  100% {
-    display: none; } }
-
-@keyframes title {
-  0% {
-    display: block;
-    opacity: 1; }
-  99% {
-    opacity: 0; }
-  100% {
-    display: none; } }
+  .l-main .visible-s {
+    display: block; }
+  .l-main .visible-l, .l-main .visible-m {
+    display: none; }
 
 .gallery-item:hover img {
   -webkit-box-shadow: none; }
@@ -736,9 +754,9 @@ pre {
 .features-hover {
   display: none;
   position: absolute;
-  -webkit-transform: translateX(-2000px);
-      -ms-transform: translateX(-2000px);
-          transform: translateX(-2000px);
+  -webkit-transform: translateX(-230px) translateY(200px);
+      -ms-transform: translateX(-230px) translateY(200px);
+          transform: translateX(-230px) translateY(200px);
   padding: 8px;
   background: #FFFFFF;
   -webkit-border-radius: 8px;
@@ -763,7 +781,7 @@ pre {
       -ms-flex-pack: center;
           justify-content: center; }
   .l-footer p {
-    margin: 10px 0 6px; }
+    margin: 30px 0 10px; }
   .l-footer a {
     font-weight: 800;
     color: #212121;
@@ -922,6 +940,8 @@ pre {
     height: 100vh; }
     .l-header .main-nav {
       display: block; }
+    .l-header .scrollDownArrow {
+      left: 50%; }
   .l-nav {
     margin: 0 auto;
     text-align: center; }

@@ -90,10 +90,28 @@ $('document').ready(function(){
         $('.sendmailsuccess').fadeOut();
     });
 
+//-------------------------SCALE ANIMATION---------------------------
+    var windowWidth, windowHeight, windowScrollTop;
+    function getWindowDimension(){
+        windowWidth = window.innerWidth;
+        windowHeight = window.innerHeight;
+        windowScrollTop = $(window).scrollTop();
+    }
+    $(window).scroll(function () {
+        getWindowDimension();
+        var scale = (windowScrollTop/windowHeight > 1)?1:windowScrollTop/windowHeight;
+        $('.scale-animation').css({
+            opacity:1-(scale/1.5), 
+            transform: 'scale('+(1-scale/2)+') translateY('+(scale*350)+'px)'
+        });
+        $('.scrollDownArrow').css({
+            opacity:1-(scale*4)
+        });
+    });
     
 // ----------------------------WOW JS--------------------------------
-
     new WOW().init();
+
 });
 
 

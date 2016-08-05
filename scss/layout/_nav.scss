@@ -8,7 +8,7 @@
 		.nav-bar {
 			transform: scale(1, 1);
 			opacity: 1;
-			height: 153px;
+			height: 210px;
 		}
 		.title {
 			display: none;
@@ -75,6 +75,21 @@
 			}
 		}
 	}
+}
+
+@keyframes title {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
 }
 
 @keyframes nav-bar {

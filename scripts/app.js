@@ -1,12 +1,12 @@
-function(t) {
-    "use strict";
+// function(t) {
+//     "use strict";
 
-    t.module("website", [
-    	"angular-parallax",
-    	"duScroll",
-    	"ngTooltip",
-    	"sticky",
-    	"interface"
-   	])
+//     t.module("website", [
+//     	"angular-parallax",
+//     	"duScroll",
+//     	"ngTooltip",
+//     	"sticky",
+//     	"interface"
+//    	])
 
-}(window.angular),
+// }(window.angular),

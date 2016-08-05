@@ -10,7 +10,7 @@
 
 function(t) {
     "use strict";
-    t.module("website", ["angular-parallax", "duScroll", "ngTooltip", "sticky", "interface"])
+    t.module("website", ["angular-parallax", "duScroll", "ngTooltip", "sticky", "interface"]).value('duScrollDuration', 1500);
 }(window.angular),
 
 
@@ -26,7 +26,7 @@ function(t) {
             controller: t,
             controllerAs: "vm",
             restrict: "A",
-            templateUrl: "./interface/navbarElement.html",
+            templateUrl: "views/navbarElement.phtml",
             scope: {
                 navbarElement: "@"
             }
@@ -57,7 +57,7 @@ function(t, e) {
             controllerAs: "vm",
             restrict: "AE",
             link: e,
-            templateUrl: "./interface/navbar.html",
+            templateUrl: "views/navbar.phtml",
             scope: !1
         }
     }
@@ -72,7 +72,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/navbar.html", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li> <a class="brackets_links js-open-contact" offset="120">contact</a> </li></ul>')
+        t.put("", '<div class="nav-header"><span class="hamburger"></span> <span class="title">{{:: vm.menu }}</span></div><ul class="nav-bar"><li navbar-element="profil"></li><li navbar-element="competences"></li><li navbar-element="projets"></li><li navbar-element="contact" class="js-open-contact"></li></ul>')
     }])
 }(),
 
@@ -84,7 +84,7 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/navbarElement.html", '<a class="brackets_links" offset="120" du-scrollspy du-smooth-scroll="{{:: vm.anchor }}">{{:: vm.title }}</a>')
+        t.put("", '<a class="brackets_links" offset="120" du-scrollspy du-smooth-scroll="{{:: vm.anchor }}">{{:: vm.title }}</a>')
     }])
 }(),
 
@@ -96,6 +96,6 @@ function(t) {
         t = angular.module("website", [])
     }
     t.run(["$templateCache", function(t) {
-        t.put("./interface/projects.html", '<div class="project col-s-12" ng-repeat="project in vm.projects"><div class="col-m-4 visible-m"><div class="border">{{:: project.icon }}</div></div><div class="description col-m-8">{{:: project.name }}<p>{{:: project.description }} <i ng-if="{{:: project.link  }}" class="devicons devicons-responsive"></i><a ng-href="{{: project.link }}">Demo</a><br><i ng-if="{{:: project.github }}" class="devicons devicons-github"></i><a ng-href="{{:: project.github }}">Github</a><br><skill-element ng-repeat="techno in project.technologies" skill="techno"></skill-element></p></div></div>')
+        t.put("", '<div class="project col-s-12" ng-repeat="project in vm.projects"><div class="col-m-4 visible-m"><div class="border">{{:: project.icon }}</div></div><div class="description col-m-8">{{:: project.name }}<p>{{:: project.description }} <i ng-if="{{:: project.link  }}" class="devicons devicons-responsive"></i><a ng-href="{{: project.link }}">Demo</a><br><i ng-if="{{:: project.github }}" class="devicons devicons-github"></i><a ng-href="{{:: project.github }}">Github</a><br><skill-element ng-repeat="techno in project.technologies" skill="techno"></skill-element></p></div></div>')
     }])
 }();
