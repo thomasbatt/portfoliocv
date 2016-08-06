@@ -7,23 +7,23 @@ var rename = require('gulp-rename');
 var uglify = require('gulp-uglify'); 
 var lazypipe = require('lazypipe');
 
-var bower = require('./bower');
+var bower = require('./bower.json');
 var bo = 'bower_components/'; 
 
 
 // -----------------------CSS ASSETS---------------------------
-var sassPaths = [
-    bo+'bootstrap-sass/assets/stylesheets',
-    bo+'animate.css',
-    bo+'devicons/css',
-    bo+'devicon',
-    bo+'elh-tooltip',
-    bo+'font-awesome/scss'
-];
+// var sassPaths = [
+//     bo+'bootstrap-sass/assets/stylesheets',
+//     bo+'animate.css',
+//     bo+'devicons/css',
+//     bo+'devicon',
+//     bo+'elh-tooltip',
+//     bo+'font-awesome/scss'
+// ];
 gulp.task('sass', function() {
     gulp.src('scss/app.scss')
         .pipe(plugins.sass({
-            includePaths: sassPaths
+            includePaths: bower.sassPaths
         })
         .on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer({
@@ -33,9 +33,9 @@ gulp.task('sass', function() {
         .pipe(rename("website.css"))
         .pipe(gulp.dest('assets/css'));
 
-    gulp.src('scss/vendors.scss')
+    gulp.src('scss/vendors/vendors.scss')
         .pipe(plugins.sass({
-            includePaths: sassPaths
+            includePaths: bower.sassPaths
         })
         .on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer({
@@ -48,15 +48,15 @@ gulp.task('sass', function() {
 
 
 // -----------------------JS ASSETS---------------------------
-var jsVendorsFiles = [
-    bo+'angular/angular.min.js',
-    bo+'angular-parallax/scripts/angular-parallax.js',
-    bo+'angular-scroll/angular-scroll.min.js',
-    bo+'jquery/dist/jquery.min.js',
-    bo+'ngSticky/dist/sticky.min.js',
-    bo+'wow/dist/wow.min.js',
-    'scripts/vendors/tooltip.min.js',
-];
+// var jsVendorsFiles = [
+//     bo+'angular/angular.min.js',
+//     bo+'angular-parallax/scripts/angular-parallax.js',
+//     bo+'angular-scroll/angular-scroll.min.js',
+//     bo+'jquery/dist/jquery.min.js',
+//     bo+'ngSticky/dist/sticky.min.js',
+//     bo+'wow/dist/wow.min.js',
+//     'scripts/vendors/tooltip.min.js',
+// ];
 var jsWebsiteFiles = [
     'scripts/interface/**.js',
     'scripts/**.js',
@@ -65,7 +65,7 @@ gulp.task('scripts', function() { 
     gulp.src(jsWebsiteFiles) 
         .pipe(concat('website.js'))
         .pipe(gulp.dest('assets/js')); 
-    gulp.src(jsVendorsFiles)
+    gulp.src(bower.jsVendorsFiles)
         .pipe(concat('vendors.min.js'))
         // .pipe(uglify())
         .pipe(gulp.dest('assets/js'));
@@ -87,8 +87,8 @@ gulp.task('icons', function() { 
 
 // -------------------------WATCHERS----------------------------
 gulp.task('default', ['sass','icons','scripts'], function() {
-    gulp.watch(['scss/**/*.scss'], ['sass']);
-    gulp.watch(['scripts/**/*.*'], ['scripts']);
+    gulp.watch(['scss/**/**.scss'], ['sass']);
+    gulp.watch(['scripts/**/**.js'], ['scripts']);
 });
 
 

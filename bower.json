@@ -33,5 +33,22 @@
     "angular-parallax": "^0.0.2",
     "angular-scroll": "^1.0.0",
     "elh-tooltip": "*"
-  }
+  },
+  "sassPaths": [
+    "bower_components/bootstrap-sass/assets/stylesheets",
+    "bower_components/animate.css",
+    "bower_components/devicons/css",
+    "bower_components/devicon",
+    "bower_components/elh-tooltip",
+    "bower_components/font-awesome/scss"
+  ],
+  "jsVendorsFiles": [
+    "bower_components/angular/angular.min.js",
+    "bower_components/angular-parallax/scripts/angular-parallax.js",
+    "bower_components/angular-scroll/angular-scroll.min.js",
+    "bower_components/jquery/dist/jquery.min.js",
+    "bower_components/ngSticky/dist/sticky.min.js",
+    "bower_components/wow/dist/wow.min.js",
+    "scripts/vendors/tooltip.min.js"
+  ]
 }
