@@ -34,21 +34,32 @@
     "angular-scroll": "^1.0.0",
     "elh-tooltip": "*"
   },
+  "main": {
+    "bowerPath":"bower_components", 
+    "destPath": "assets",
+    "destFile": "vendors",
+    "srcPath": "./"
+  },
   "sassPaths": [
-    "bower_components/bootstrap-sass/assets/stylesheets",
-    "bower_components/animate.css",
-    "bower_components/devicons/css",
-    "bower_components/devicon",
-    "bower_components/elh-tooltip",
-    "bower_components/font-awesome/scss"
+    "bootstrap-sass/assets/stylesheets",
+    "animate.css",
+    "devicons/css",
+    "devicon",
+    "elh-tooltip",
+    "font-awesome/scss"
   ],
   "jsVendorsFiles": [
-    "bower_components/angular/angular.min.js",
-    "bower_components/angular-parallax/scripts/angular-parallax.js",
-    "bower_components/angular-scroll/angular-scroll.min.js",
-    "bower_components/jquery/dist/jquery.min.js",
-    "bower_components/ngSticky/dist/sticky.min.js",
-    "bower_components/wow/dist/wow.min.js",
-    "scripts/vendors/tooltip.min.js"
+    "angular/angular.min.js",
+    "angular-parallax/scripts/angular-parallax.js",
+    "angular-scroll/angular-scroll.min.js",
+    "jquery/dist/jquery.min.js",
+    "ngSticky/dist/sticky.min.js",
+    "wow/dist/wow.min.js"
+  ],
+  "iconsFiles": [
+    "bootstrap-sass/assets/fonts/*/**.*",
+    "devicons/fonts/**.*",
+    "devicon/fonts/**.*",
+    "font-awesome/fonts/**.*"
   ]
 }
