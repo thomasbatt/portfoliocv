@@ -2,71 +2,71 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var bower = require('./bower');
 
-function bowerPath(url){
-    for (i = 0; i < url.length; i++) {
-      url[i] = bower.main['bowerPath']+"/"+url[i];
+function bowerPath(urls){
+    for (i = 0; i < urls.length; i++) {
+      urls[i] = bower.root['bowerPath']+"/"+urls[i];
     }
-    return url;
+    return urls;
 }
 // -----------------------CSS ASSETS---------------------------
-var bowerSassPaths = bowerPath(bower.sassPaths);
+var bowercssVendorsFiles = bowerPath(bower.cssVendorsFiles);
+bowercssVendorsFiles.push(bower.root['srcPath']+'/scss/vendors/tmp.css');
 
 gulp.task('sass', function() {
-    gulp.src(bower.main['srcPath']+'scss/app.scss')
-        .pipe(plugins.sass({
-            includePaths: bowerSassPaths
-        })
-        .on('error', plugins.sass.logError))
-        .pipe(plugins.autoprefixer({
-            browsers: ['last 20 versions', 'ie >= 9']
-        }))
+    gulp.src(bower.root['srcPath']+'/scss/app.scss')
+        .pipe(plugins.sass().on('error', plugins.sass.logError))
+        .pipe(plugins.autoprefixer({browsers: ['last 20 versions', 'ie >= 9']}))
         .pipe(plugins.cleanCss({compatibility: 'ie8'}))
-        .pipe(plugins.rename("website.css"))
-        .pipe(gulp.dest(bower.main['destPath']+'/css'));
+        .pipe(plugins.rename('website.min.css'))
+        .pipe(gulp.dest(bower.root['destPath']+'/css'));
 
-    gulp.src(bower.main['srcPath']+'scss/vendors/vendors.scss')
+    gulp.src(bower.root['srcPath']+'scss/vendors/bootstrap/app.scss')
         .pipe(plugins.sass({
-            includePaths: bowerSassPaths
-        })
-        .on('error', plugins.sass.logError))
-        .pipe(plugins.autoprefixer({
-            browsers: ['last 20 versions', 'ie >= 9']
-        }))
+            includePaths: bower.root['bowerPath']+'/bootstrap-sass/assets/stylesheets'
+            }).on('error', plugins.sass.logError))
+        .pipe(plugins.autoprefixer({browsers: ['last 20 versions', 'ie >= 9']}))
         .pipe(plugins.cleanCss({compatibility: 'ie8'}))
-        .pipe(plugins.rename(bower.main['destFile']+".min.css"))
-        .pipe(gulp.dest(bower.main['destPath']+'/css'));
+        .pipe(plugins.rename("tmp.css"))
+        .pipe(gulp.dest(bower.root['srcPath']+'scss/vendors'));
+
+    gulp.src(bowercssVendorsFiles)
+        .pipe(plugins.concat('vendors.min.css'))
+        .pipe(plugins.cleanCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest(bower.root['destPath']+'/css'));
 });
 
 
 // -----------------------JS ASSETS---------------------------
+var bowerjsVendorsFiles = bowerPath(bower.jsVendorsFiles);
+bowerjsVendorsFiles.push(bower.root['srcPath']+'/scripts/vendors/tooltip.min.js');
 
 gulp.task('scripts', function() { 
     gulp.src([
-            bower.main['srcPath']+'scripts/interface/**.js',
-            bower.main['srcPath']+'scripts/**.js',
-            bower.main['srcPath']+'scripts/vendors/tooltip.min.js'
+            bower.root['srcPath']+'/scripts/interface/**.js',
+            bower.root['srcPath']+'/scripts/**.js',
         ]) 
-        .pipe(plugins.concat('website.js'))
+        .pipe(plugins.concat('website.min.js'))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(bower.root['destPath']+'/js')); 
+
+    gulp.src(bowerjsVendorsFiles)
+        .pipe(plugins.concat('vendors.min.js'))
         // .pipe(plugins.uglify())
-        .pipe(gulp.dest(bower.main['destPath']+'/js')); 
-    gulp.src(bowerPath(bower.jsVendorsFiles))
-        .pipe(plugins.concat(bower.main['destFile']+'.min.js'))
-        // .pipe(plugins.uglify())
-        .pipe(gulp.dest(bower.main['destPath']+'/js'));
+        .pipe(gulp.dest(bower.root['destPath']+'/js'));
 });
 
 
 // -----------------------FONTS ASSETS---------------------------
 gulp.task('icons', function() { 
     return gulp.src(bowerPath(bower.iconsFiles)) 
-        .pipe(gulp.dest(bower.main['destPath']+'/fonts')); 
+        .pipe(gulp.dest(bower.root['destPath']+'/fonts')); 
 });
 
 
 // -------------------------WATCHERS----------------------------
 gulp.task('default', ['sass','icons','scripts'], function() {
-    gulp.watch([bower.main['srcPath']+'scss/**/**.scss'], ['sass']);
-    gulp.watch([bower.main['srcPath']+'scripts/**/**.js'], ['scripts']);
+    gulp.watch([bower.root['srcPath']+'/scss/**/**.scss'], ['sass']);
+    gulp.watch([bower.root['srcPath']+'/scripts/**/**.js'], ['scripts']);
 });
 
 

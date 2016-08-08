@@ -34,19 +34,18 @@
     "angular-scroll": "^1.0.0",
     "elh-tooltip": "*"
   },
-  "main": {
+  "root": {
     "bowerPath":"bower_components", 
     "destPath": "assets",
-    "destFile": "vendors",
-    "srcPath": "./"
+    "srcPath": "."
   },
-  "sassPaths": [
-    "bootstrap-sass/assets/stylesheets",
-    "animate.css",
-    "devicons/css",
-    "devicon",
-    "elh-tooltip",
-    "font-awesome/scss"
+  "cssVendorsFiles": [
+    "font-awesome/css/font-awesome.css",
+    "devicons/css/devicons.css",
+    "devicon/devicon.css",
+    "devicon/devicon-colors.css",
+    "animate.css/animate.css",
+    "elh-tooltip/tooltip.css"
   ],
   "jsVendorsFiles": [
     "angular/angular.min.js",

@@ -46,6 +46,9 @@
 					cursor: pointer;
 					font-size: 25px;
 				}
+				a{
+					color: $lightColor;
+				}
 			}
 		}
 
@@ -65,7 +68,7 @@
 			    	resize: none;
 				}
 				.error{
-					color: #F68C76;
+					color: $lightColor;
 					font-size: 1.1rem; 	
 				}
 			}
