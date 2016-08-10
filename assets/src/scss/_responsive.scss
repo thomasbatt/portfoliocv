@@ -100,9 +100,15 @@
         }
         .skills {
             padding: 10px;
-            margin: 50px 0 0;
+            margin: 50px 10px 0;
+            &:before {
+                display: block;
+            }
         }
         .portfolio {
+            &:before {
+                display: block;
+            }
             .project {
                 margin: 0 auto;
                 display: flex;

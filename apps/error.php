@@ -17,7 +17,4 @@ catch (Exception $e){
 if (isset($input_error))
 	foreach($input_error as $index)
 		echo " - ".$index;
-
-// var_dump($error);
-// var_dump($input_error);
 ?>

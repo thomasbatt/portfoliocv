@@ -1,8 +1,13 @@
 @mixin forms-field($width){
 	width: $width;
 	padding: 5px 10px;
-	box-shadow: 0 0 5px rgba(#CCC, .6) inset;
+	// box-shadow: 0 0 5px rgba(#CCC, .6) inset;
     line-height: 1;
+    border-radius: 0px;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
 }
 
 @mixin forms-bottomfield(){

@@ -70,7 +70,7 @@
 
 // ----------------------------COMPETENCES---------------------
     .skills {
-        margin: 10px 10px;
+        margin: 0 0;
         padding: 10px 0;
         text-align: center;
         background: $skillsColor;
@@ -88,6 +88,7 @@
             width: 25vw;
         }
         &:before {
+            display: none;
             transform: rotate(-2deg);
             transform-origin: 2% 0;
             top: 0;
@@ -148,12 +149,13 @@
             }
         }
         &:before {
+            display: none;
             transform: rotate(-2deg);
             transform-origin: 2% 0;
             top: 0;
             left: -50%;
             z-index: -1;
-            width: 200%;
+            width: 160%;
             height: 50%;
             background: inherit;
         }
