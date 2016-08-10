@@ -46,6 +46,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+body, html{
+  min-width: 310px;
+  width: 100%;
+}
+
 audio, canvas, progress, video {
   display: inline-block;
   vertical-align: baseline;

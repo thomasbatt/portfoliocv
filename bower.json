@@ -36,8 +36,8 @@
   },
   "root": {
     "bowerPath":"bower_components", 
-    "destPath": "assets",
-    "srcPath": "."
+    "destPath": "assets/dist",
+    "srcPath": "assets/src"
   },
   "cssVendorsFiles": [
     "font-awesome/css/font-awesome.css",

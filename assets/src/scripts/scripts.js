@@ -80,7 +80,7 @@ $('document').ready(function(){
     });
 
 // ------------------------------MODAL--------------------------------
-    $('.js-open-contact').click(function(e){
+    $('[navbar-element="contact"], .js-open-contact').click(function(e){
         e.preventDefault();
         $('.contact').fadeIn();
     });
@@ -113,6 +113,3 @@ $('document').ready(function(){
     new WOW().init();
 
 });
-
-
-

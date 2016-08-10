@@ -6,7 +6,7 @@ function(t) {
         "duScroll",
         "ngTooltip",
         "sticky",
-        "interface"
+        "interface",
     ]).value(
         "duScrollDuration",
         1500
