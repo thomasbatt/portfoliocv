@@ -10,7 +10,7 @@ function(t) {
             controller: t,
             controllerAs: "vm",
             restrict: "A",
-            templateUrl: "views/navbarElement.phtml",
+            templateUrl: "views/dist/ng-interface/navbarElement.phtml",
             scope: {
                 navbarElement: "@"
             }

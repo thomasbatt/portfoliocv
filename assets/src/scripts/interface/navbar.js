@@ -19,7 +19,7 @@ function(t, e) {
             controllerAs: "vm",
             restrict: "AE",
             link: e,
-            templateUrl: "views/navbar.phtml",
+            templateUrl: "views/dist/ng-interface/navbar.phtml",
             scope: !1
         }
     }

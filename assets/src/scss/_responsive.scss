@@ -1,5 +1,5 @@
 
-@media only screen and (min-width: 400px){
+@media only screen and (min-width: 600px){
     
     .l-modals{
         .contact{
@@ -13,7 +13,7 @@
                 transform: translateX(-50%) translateY(-50%);
                 top: 50%;
                 left: 50%;
-                padding: 60px 40px;
+                padding: 60px 60px;
             }
             &-content{
                 .js-contact-error{

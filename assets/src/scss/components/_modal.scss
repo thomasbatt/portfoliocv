@@ -30,6 +30,7 @@
 
 		&-header{
 			padding-bottom: 20px;
+			margin-top: 10px;
 			margin-bottom: 15px;
 		 	border-bottom: 1px solid #ddd;
 			.title{
@@ -84,7 +85,7 @@
 				}
 				textarea{
 					@include forms-field(100%);
-			    	height: 158px;
+			    	height: 155px;
 			    	resize: none;
 				}
 				.error{

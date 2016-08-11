@@ -34,7 +34,7 @@ try
 }
 catch (PDOException $e)
 {
-	require('views/errors500.phtml');
+	require(URL_VIEWS.'components/errors500.phtml');
 	die();
 }
 
@@ -43,8 +43,8 @@ catch (PDOException $e)
 $page = 'content';
 $access = [ 'content', 'contact', 'sendmailsuccess'];
 $ajax = [
-	'contact'=>'apps/contact_error.php',
-	'error'=>'apps/error.php',
+	'contact'=>URL_APPS.'components/contact_error.php',
+	'error'=>URL_APPS.'components/error.php',
 ];
 
 if (isset($_GET['page']))
@@ -81,13 +81,13 @@ if (isset($_POST['action']))
 	if (isset($traitement_action[$action])) 
 	{
 		$value = $traitement_action[$action];
-		require('apps/traitement'.$value.'.php');
+		require(URL_APPS.'handlers/traitement'.$value.'.php');
 	}
 }
 
 
 if (!isset($_GET['ajax']))
-	require('apps/skel.php');
+	require(URL_APPS.'skel.php');
 else
 	require($page);
 

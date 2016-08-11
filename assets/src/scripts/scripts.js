@@ -80,14 +80,13 @@ $('document').ready(function(){
     });
 
 // ------------------------------MODAL--------------------------------
-    $('[navbar-element="contact"], .js-open-contact').click(function(e){
+    $('.js-open-contact').click(function(e){
         e.preventDefault();
         $('.contact').fadeIn();
     });
     $('.button-close').click(function(e){
         e.preventDefault();
-        $('.contact').fadeOut();
-        $('.sendmailsuccess').fadeOut();
+        $('.contact, .sendmailsuccess').fadeOut();
     });
 
 //-------------------------SCALE ANIMATION---------------------------

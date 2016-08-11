@@ -8,7 +8,7 @@ try{
 	$error->setIsPosition($pos);
 
 	if ( $error->isNow() && $error->isPosition() )
-		require('views/error.phtml');
+		require(URL_VIEWS.'components/error.phtml');
 }
 catch (Exception $e){
 	$input_error['getAll'] = $e->getMessage() ;
