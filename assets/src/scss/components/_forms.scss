@@ -1,7 +1,7 @@
 @mixin forms-field($width){
 	width: $width;
 	padding: 5px 10px;
-	// box-shadow: 0 0 5px rgba(#CCC, .6) inset;
+    background-color: $bgColor;
     line-height: 1;
     border-radius: 0px;
     border-top: none;

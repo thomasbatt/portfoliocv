@@ -12,8 +12,8 @@
 		&-body{
 			position: absolute;
 			max-width: 1000px;
-			min-width: 360px;
-            width: 90%;
+			min-width: 300px;
+            // width: 90%;
             transform: none;
             top: 0px;
             left: -4px;
@@ -38,16 +38,16 @@
 				padding-right: 20px;
 			}
 			.subtitle{
-				display: inline-block;
+				display: none;
 			}
 			.button-close {
 				display: inline-block;
 				i{
 					position: absolute;
-					top: -3px;
-					right: 27px;
+					top: 0px;
+					right: 15px;
 					cursor: pointer;
-					font-size: 25px;
+					font-size: 21px;
 				}
 				a{
 					color: $lightColor;
@@ -59,14 +59,19 @@
 			.js-contact-error{
 				.b-bottom{
 					padding: 10px 0px 5px;
-					margin: 0px 15px 25px 0px;
-					border-bottom: 3px solid $lightColor;
+					margin: 0px 0px 25px 0px;
+					border-bottom: 2px solid $lightColor;
+					width: 100%;
 					&-area{
-						border-bottom: 3px solid $lightColor;
+						border-bottom: 2px solid $lightColor;
+						width: 100%;
 					}
 				}
 				.input, .label{
 					display: inline-block;
+				}
+				.input{
+					width: 60%;
 				}
 				label{
 					font-weight: normal;
@@ -83,24 +88,47 @@
 			    	resize: none;
 				}
 				.error{
-					margin-top: -20px;
+					margin-top: -24px;
+					text-align: right;
+					margin-right: 16px;
 					color: $lightColor;
-					font-size: 1.1rem; 	
+					font-size: 1.1rem;
+					z-index: 30000; 
+					animation: shaker 0.5s ease infinite alternate;	
 				}
 			}
 			.checkbox_send_copy{
 				@include forms-bottomfield();
 				input{
 					margin-left: 0 !important;
+				    &[type="checkbox"]{
+				    	border-radius: 0px;
+						border: 0.5px solid $lightColor;
+					    cursor: pointer;
+					    background-color: $bgColor;
+				    }
 				}
 				label{
-					margin-left: 10px;
+					margin-left: 0px;
+					font-size: 1.2rem;
 				}
 			}
+			.wrapper-submit{
+				text-align: right;
+			}
+			// div:has(> .js_submit_contact){
+			// 	text-align: right;
+			// }
 			.js_submit_contact{
 				@include forms-bottomfield();
+				display: inline-block;
 				input{
+					border-radius: 0px;
+					border: 0.5px solid $lightColor;
 				    cursor: pointer;
+				    background-color: $bgColor;
+				    padding: 3px 10px;
+				    font-size: 1.4rem;
 				}
 			}	
 		}
@@ -113,4 +141,13 @@
 	.display-none {
 	  display: none;
 	}
+}
+
+@keyframes shaker {
+    from {
+        transform: translatex(0);
+    }
+    to   { 
+        transform: translatex(-7px);
+     }
 }

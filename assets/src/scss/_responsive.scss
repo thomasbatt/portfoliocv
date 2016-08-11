@@ -3,6 +3,11 @@
     
     .l-modals{
         .contact{
+            &-header{
+                .subtitle{
+                    display: inline-block;
+                }
+            }
             &-body {
                 width: 80%;
                 transform: translateX(-50%) translateY(-50%);
@@ -12,6 +17,9 @@
             }
             &-content{
                 .js-contact-error{
+                    .b-bottom{
+                        margin-right: 25px;
+                    }
                     input{
                         @include forms-field(95%);
                     }
@@ -19,10 +27,17 @@
                         @include forms-field(95%);
                     }
                 }
+                .checkbox_send_copy{
+                    label{
+                        margin-left: 10px;
+                        font-size: 1.6rem;
+                    }
+            }
             }
         }
     }
 }
+
 
 @media only screen and (min-width: 768px) {
 
