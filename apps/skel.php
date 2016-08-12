@@ -1,3 +1,3 @@
 <?php
-	require(URL_VIEWS.'skel.phtml');
+	require(URL_VIEWS.'skel.min.phtml');
 ?>

@@ -1,0 +1,30 @@
+<div class="contact <?=htmlentities($display_page['contact'])?> ">
+	<div class="contact-body row">
+	    <div class="contact-header col-xs-12">
+	        <div class="title">Un projet a me soumettre?</div>
+	        <div class="subtitle">Contactez moi par mail en remplissant le formulaire ci-dessous.</div>
+			<div class="button-close ">
+				<a href="<?php URL_WEBSITE ?>content"><i class="fa fa-times"></i></a>
+			</div>
+	    </div>
+	    <div class="contact-content col-xs-12">
+		    <form method="post" id="form" class="row" action="contact" enctype="multipart/form-data" >
+		    	<div class="col-xs-12">
+	                <?php require(URL_VIEWS.'components/contact_error.min.phtml') ?>
+	            </div>
+	            <div class="col-md-6 col-xs-7">
+	                <div class="checkbox checkbox_send_copy ">
+	                    <input type="checkbox" value="1" name="send_copy" id="send_copy" />
+	                    <label for="send_copy">M'envoyer une copie</label>
+	                </div>
+	            </div>
+	            <div class="col-md-6 col-xs-5 wrapper-submit">
+	                <div class="input input_submit js_submit_contact ">
+	                    <input type="hidden" value="send_mail" name="action"/>
+	                    <input type="submit" value="Envoyer" class="submit" />
+	                </div>
+	            </div>
+		    </form>
+	    </div>
+	</div>
+</div>

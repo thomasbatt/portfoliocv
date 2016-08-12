@@ -23,8 +23,18 @@ spl_autoload_register(function($class)
 
 // ________ CONFIGURATION ________
 
-require('./config/dbConfig.php');
-require('./config/globalConfig.php');
+$file = "bower.json";
+$json = file_get_contents( $file );
+if ( $json !== FALSE){
+	$bower = json_decode( $json, true);
+	require('./config/globalConfig.php');
+	require('./config/dbConfig.php');
+}
+else{
+	// echo "Impossible d'ouvrir le fichier ".$file;
+	exit;
+}
+
 
 // ________ DATABASE ________
 
@@ -34,7 +44,7 @@ try
 }
 catch (PDOException $e)
 {
-	require(URL_VIEWS.'components/errors500.phtml');
+	// require(URL_VIEWS.'components/errors500.phtml');
 	die();
 }
 

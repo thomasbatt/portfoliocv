@@ -1,3 +1,3 @@
 <?php
-	require(URL_VIEWS.'components/sendmailsuccess.phtml');
+	require(URL_VIEWS.'components/sendmailsuccess.min.phtml');
 ?>

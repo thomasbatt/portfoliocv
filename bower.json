@@ -1,4 +1,4 @@
-{
+ {
   "name": "website",
   "homepage": "https://github.com/thomasbatt/portfoliocv",
   "authors": [
@@ -35,9 +35,11 @@
     "elh-tooltip": "*"
   },
   "root": {
-    "bowerPath":"bower_components", 
-    "destPath": "assets/dist",
-    "srcPath": "assets/src"
+    "bowerPath": "bower_components", 
+    "srcPath": "src",
+    "urlAssets": "assets",
+    "urlApps": "apps",
+    "urlViews": "views"
   },
   "cssVendorsFiles": [
     "font-awesome/css/font-awesome.css",

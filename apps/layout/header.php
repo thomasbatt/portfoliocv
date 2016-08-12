@@ -1,3 +1,3 @@
 <?php
-	require(URL_VIEWS.'layout/header.phtml');
+	require(URL_VIEWS.'layout/header.min.phtml');
 ?>
