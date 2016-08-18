@@ -1,17 +1,19 @@
-function(t) {
+function(angular) {
     "use strict";
 
-    function e($http,$timeout) {
-        function t(t) {
-            var e = this;
-            return e.anchor = t.navbarElement, e.title = e.anchor.charAt(0).toUpperCase() + e.anchor.substr(1), e
+    function navbar($http) {
+        function navbarElement($element) {
+            var $scope = this;
+            return $scope.anchor = $element.navbarElement,
+                $scope.title = $scope.anchor.charAt(0).toUpperCase() + $scope.anchor.substr(1),
+                $scope
         };
         var obj = [];
         $http.get('bower.json').success(function(data) { 
             obj.urlViews = data.root.urlViews
         });
-        return t.$inject = ["$scope"], {
-            controller: t,
+        return navbarElement.$inject = ["$scope"], {
+            controller: navbarElement,
             controllerAs: "vm",
             restrict: "A",
             templateUrl: "views/interface/navbarElement.min.phtml",
@@ -20,6 +22,6 @@ function(t) {
             }
         }
     }
-    t.module("interface").directive("navbarElement", ['$http', e ])
+    angular.module("interface").directive("navbarElement", ['$http', navbar ])
 }(window.angular),
 

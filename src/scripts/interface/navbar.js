@@ -1,27 +1,27 @@
-function(t, e) {
+function(angular, $link) {
     "use strict";
 
-    function n(t) {
-        function e(e, n, i, l) {
-            n.on("click", function() {
-                n[0].clientWidth < 768 && t(function() {
-                    n.toggleClass("open")
+    function navbar($scope) {
+        function link($link, $menu) {
+            $menu.on("click", function() {
+                $menu[0].clientWidth < 768 && $scope(function() {
+                    $menu.toggleClass("open")
                 })
             })
         }
 
-        function n() {
-            var t = this;
-            return t.menu = "Menu", t
+        function navbar() {
+            var $scope = this;
+            return $scope.menu = "Menu", $scope
         }
         return {
-            controller: n,
+            controller: navbar,
             controllerAs: "vm",
             restrict: "AE",
-            link: e,
+            link: link,
             templateUrl: "views/interface/navbar.min.phtml",
             scope: !1
         }
     }
-    t.module("interface").directive("navbar", n), n.$inject = ["$timeout"]
+    angular.module("interface").directive("navbar", navbar), navbar.$inject = ["$timeout"]
 }(window.angular, window.document),

@@ -1,7 +1,7 @@
-function(t) {
+function(angular) {
     "use strict";
 
-    t.module("website", [
+    angular.module("website", [
         "angular-parallax",
         "duScroll",
         "ngTooltip",

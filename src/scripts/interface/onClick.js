@@ -1,10 +1,10 @@
-function(t) {
+function(angular) {
     'use strict';
 
-    function c(s) {
-        s.openContact = function(){
+    function onclick($scope) {
+        $scope.openContact = function(){
             $('.contact').fadeIn();
         };
     }
-    t.module("interface").controller('onClick', ['$scope', c ]);
+    angular.module("interface").controller('onClick', ['$scope', onclick ]);
 }(window.angular),

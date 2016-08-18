@@ -1,6 +1,5 @@
-! function(t) {
+! function(angular) {
     "use strict";
     
-    t.module("interface", [])
-
+    angular.module("interface", [])
 }(window.angular),
