@@ -26,7 +26,7 @@ gulp.task('sass', function() {
         .pipe(plugins.base64({
             baseDir: urlAssets+'/**',
             extensions: ['svg','png','jpg'],
-            maxImageSize: 8*1024,
+            // maxImageSize: 8*1024,
             // debug: true
         }))
         .pipe(plugins.rename('website.min.css'))
