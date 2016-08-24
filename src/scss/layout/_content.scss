@@ -139,12 +139,17 @@
             p {
                 color: $lightColor;
                 font-size: 0.8em;
-                a {
-                    color: $textColor;
-                }
                 i {
                     font-size: 2em;
                     vertical-align: middle;
+                }
+            }
+            .wrapper-devicon{
+                position: relative;
+                a {
+                    position: absolute;
+                    color: #E54D26;
+                    padding-left: 5px;
                 }
             }
         }
