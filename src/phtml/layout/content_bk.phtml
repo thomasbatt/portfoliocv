@@ -1,9 +1,50 @@
 <div class="l-nav" id="nav" navbar sticky sticky-class="shadow"></div>
 
 <div class="l-main">
+    <div id="profil" class="about row">
+        <div class="about_me col-s-12 col-m-12">
+            <div class="col-s-12 col-m-3 img-profil">
+                <div class="wow zoomIn"><img class="border" ng-src="<?=URL_ASSETS?>img/profile-rond.jpg" alt="thomasbatt"></div>
+            </div>
+            <div class="col-s-12 col-m-6">
+                <p class="title">Je suis un petit baroudeur de 34 ans, passionné par le développement web, le Trail, le Triathlon, la bière Alsacienne et les ordinateurs.</p>
+                <p class="subtitle">Autodidacte en administration réseaux et systèmes, j'ai étudié le développement web et ses outils en session intensive.</p>
+            </div>
+        </div>
+        <div class="col-s-12 text-center">
+            <h2>Expériences et formations</h2>
+        </div>
+        <div class="education col-s-12 col-m-4">
+            <div class="border wow zoomIn">
+                <img ng-src="<?=URL_ASSETS?>img/ulp.png" alt="ulp">
+            </div>
+            <div class="description">Université Louis-Pasteur Strasbourg
+                <p>Master de Physique - Option dévelopement informatique
+                    <br></p>
+            </div>
+            <div class="separator visible-s"></div>
+        </div>
+        <div class="education col-s-12 col-m-4">
+            <div class="border wow zoomIn">
+                <img ng-src="<?=URL_ASSETS?>img/3wa.jpeg" alt="3wa">
+            </div>
+            <div class="description">3WAcademy Strasbourg
+                <p>Formation intensive sur les technologies les plus utilisées du web.
+                    <br>Titre d'état RNCP</p>
+            </div>
+            <div class="separator visible-s"></div>
+        </div>
+        <div class="education col-s-12 col-m-4">
+            <div class="border wow zoomIn">
+                <img ng-src="<?=URL_ASSETS?>img/ocr.png" alt="ocr">
+            </div>
+            <div class="description">Auto-formation développeur web
+                <p>Auto-formation avec des sites comme Openclassrooms et Grafikart.</p>
+            </div>
+        </div>
+    </div>
 
-
-    <div id="competences" class="skills row">
+    <div id="competences" class="skills background-diagonal row">
         <h2>Compétences et outils</h2>
         <div class="col-s-12 col-m-4">
             <h3>Développement</h3>
@@ -65,44 +106,8 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
     <div id="projets" class="portfolio background-diagonal row">
         <h2>Réalisations clients</h2>
-
-
-        <div class="project col-s-12 col-m-6">
-            <div class="visible-m wow zoomIn">
-                <a class="gallery-item" href="http://triathlon-hochfelden.fr" target="_blank" rel="<?=URL_ASSETS?>img/triathlon-hochfelden-67531_388x222.jpg" >
-                    <img class="border" ng-src="<?=URL_ASSETS?>img/triathlon-hochfelden.jpg" alt="triathlon-hochfelden">
-                </a>
-            </div>
-            <div class="description">Triathlon-hochfelden
-                <p>Triathlon-hochfelden. Portail des adhérents du club de Hochfelden.<br>
-                    <a target="_blank" href="http://triathlon-hochfelden.fr">Demo</a><br>
-                    <div class="wrapper-devicon wow zoomIn">
-                        <i tooltip="wordpress" class="devicon-wordpress-plain colored"></i> 
-                        <i tooltip="PHP" class="devicon-php-plain colored"></i> 
-                        <i tooltip="Html5" class="devicon-html5-plain colored"></i>
-                        <i tooltip="Javascript" class="devicon-javascript-plain colored"></i>                        
-                        <i tooltip="jQuery" class="devicon-jquery-plain colored"></i> 
-                        <i tooltip="Photoshop" class="devicon-photoshop-plain colored"></i>
-                        <i tooltip="SASS" class="devicon-sass-plain colored"></i> 
-                        <i tooltip="NPM" class="devicons devicons-npm"></i> 
-                        <i tooltip="BOWER" class="devicon-bower-plain colored"></i>                    
-                        <i tooltip="GULP" class="devicon-gulp-plain colored"></i> 
-                    </div>
-                </p>
-            </div>
-        </div>
-
         <div class="project col-s-12 col-m-6">
             <div class="visible-m wow zoomIn">
                 <a class="gallery-item" href="http://galart.fr" target="_blank" rel="<?=URL_ASSETS?>img/galart-110929_388x222.jpg" >
@@ -110,7 +115,7 @@
                 </a>
             </div>
             <div class="description">Galart.fr
-                <p>Galina DZUNOVA. Artiste peintre, collection de tableaux abstraits réalisés à la main<br>
+                <p>Galina DZUNOVA. Artiste peintre<br>
                     <i tooltip="Responsive" class="devicons devicons-responsive"></i>
                     <a target="_blank" href="http://galart.fr">Demo</a><br>
                     <div class="wrapper-devicon wow zoomIn">
@@ -122,7 +127,6 @@
                 </p>
             </div>
         </div>
-
         <div class="project col-s-12 col-m-6">
             <div class="visible-m wow zoomIn">
                 <a class="gallery-item" href="http://vpevents.webatt.fr" target="_blank" rel="<?=URL_ASSETS?>img/vpevents-116754_388x222.jpg" >
@@ -144,7 +148,6 @@
                 </p>
             </div>
         </div>
-
         <div class="project col-s-12 col-m-6">
             <div class="visible-m wow zoomIn">
                 <a class="gallery-item" href="http://li-ga.fr" target="_blank" rel="<?=URL_ASSETS?>img/liga-65144_388x222.jpg" >
@@ -164,8 +167,24 @@
                 </p>
             </div>
         </div>
-
-
+        <div class="project col-s-12 col-m-6">
+            <div class="visible-m wow zoomIn">
+                <a class="gallery-item" href="http://tadja.fr" target="_blank" rel="<?=URL_ASSETS?>img/tadja-67531_388x222.jpg" >
+                    <img class="border" ng-src="<?=URL_ASSETS?>img/tadja.jpg" alt="tadja">
+                </a>
+            </div>
+            <div class="description">Tadja
+                <p>TADJA, c’est 6 musiciens venus des quatre coins de France et en escale à Strasbourg.<br>
+                    <a target="_blank" href="http://tadja.fr">Demo</a><br>
+                    <div class="wrapper-devicon wow zoomIn">
+                        <i tooltip="wordpress" class="devicon-wordpress-plain colored"></i> 
+                        <i tooltip="Html5" class="devicon-html5-plain colored"></i>
+                        <i tooltip="Css3" class="devicon-css3-plain colored"></i>
+                        <i tooltip="Photoshop" class="devicon-photoshop-plain colored"></i>
+                    </div>
+                </p>
+            </div>
+        </div>
         <div class="clearfix"></div>
         <h2>Projets personnels et collaboratifs</h2>
         <div class="project col-s-12 col-m-6">
@@ -266,57 +285,5 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-    <div id="profil" class="about background-diagonal row">
-        <div class="col-s-12 text-center">
-            <h2>Profile</h2>
-        </div>
-        <div class="about_me col-s-12 col-m-12">
-            <div class="col-s-12 col-m-3 img-profil">
-                <div class="wow zoomIn"><img class="border" ng-src="<?=URL_ASSETS?>img/profile-rond.jpg" alt="thomasbatt"></div>
-            </div>
-            <div class="col-s-12 col-m-6">
-                <p class="title">Je suis un petit baroudeur de 34 ans, passionné par le développement web, le Trail, le Triathlon, la bière Alsacienne et les ordinateurs.</p>
-                <p class="subtitle">Autodidacte en administration réseaux et systèmes, j'ai étudié le développement web et ses outils en session intensive.</p>
-            </div>
-        </div>
-        <div class="col-s-12 text-center">
-            <h2>Expériences et formations</h2>
-        </div>
-        <div class="education col-s-12 col-m-4">
-            <div class="border wow zoomIn">
-                <img ng-src="<?=URL_ASSETS?>img/ulp.png" alt="ulp">
-            </div>
-            <div class="description">Université Louis-Pasteur Strasbourg
-                <p>Master de Physique - Option dévelopement informatique
-                    <br></p>
-            </div>
-            <div class="separator visible-s"></div>
-        </div>
-        <div class="education col-s-12 col-m-4">
-            <div class="border wow zoomIn">
-                <img ng-src="<?=URL_ASSETS?>img/3wa.jpeg" alt="3wa">
-            </div>
-            <div class="description">3WAcademy Strasbourg
-                <p>Formation intensive sur les technologies les plus utilisées du web.
-                    <br>Titre d'état RNCP</p>
-            </div>
-            <div class="separator visible-s"></div>
-        </div>
-        <div class="education col-s-12 col-m-4">
-            <div class="border wow zoomIn">
-                <img ng-src="<?=URL_ASSETS?>img/ocr.png" alt="ocr">
-            </div>
-            <div class="description">Auto-formation développeur web
-                <p>Auto-formation avec des sites comme Openclassrooms et Grafikart.</p>
-            </div>
-        </div>
-    </div>
-
-
 
 </div>

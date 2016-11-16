@@ -3,7 +3,7 @@
     margin: 0 auto;
 // ------------------------------PROFIL---------------------------
     .about {
-        margin: 0 10px;
+        margin: 80px 10px 50px;
         .separator-about {
             margin: 50px auto;
             content: ' ';
@@ -65,6 +65,9 @@
                 }
             }
         }
+        h2{
+            margin-bottom: 5px
+        }
     }
 
 
@@ -73,7 +76,6 @@
         margin: 0 0;
         padding: 10px 0;
         text-align: center;
-        background: $skillsColor;
         z-index: 1;
         i {
             font-size: 40px;
@@ -126,8 +128,10 @@
     .portfolio {
         text-align: center;
         padding: 10px;
-        margin: 0 10px;
-        background: $bgColor;
+        margin: 0;
+        background: $skillsColor;
+        padding: 10px 20px;
+        // background: $bgColor;
         z-index: 1;
         i {
             font-size: 1.5em;
@@ -157,11 +161,11 @@
             display: none;
             transform: rotate(-2deg);
             transform-origin: 2% 0;
-            top: 0;
+            top: 10px;
             left: -50%;
             z-index: -1;
-            width: 160%;
-            height: 50%;
+            width: 200%;
+            height: 110%;
             background: inherit;
         }
     }

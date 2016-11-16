@@ -1,0 +1,281 @@
+
+.l-main {
+    margin: 0 auto;
+// ------------------------------PROFIL---------------------------
+    .about {
+        margin: 0 10px;
+        .separator-about {
+            margin: 50px auto;
+            content: ' ';
+            background-color: $textColor2;
+            height: 2px;
+            width: 25vw;
+        }
+        .about_me {
+            margin: 0 auto;
+            .img-profil{
+                text-align: center;
+            }
+            .border {
+                overflow: hidden;
+                height: 100px;
+                width: 100px;
+                margin: 0 auto;
+                text-align: center;
+                // img {
+                //     width: 100%;
+                //     height: auto;
+                //     max-width: none;
+                //     max-height: none;
+                // }
+            }
+            .subtitle {
+                color: $lightColor;
+                font-size: 0.8em;
+            }
+        }
+        .education {
+            text-align: center;
+            padding: 10px;
+            .separator {
+                margin: 0 auto;
+                content: ' ';
+                background-color: $textColor2;
+                height: 2px;
+                width: 25vw;
+            }
+            .border {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            i {
+                font-size: 50px;
+                color: $textColor2;
+            }
+            &.work i {
+                font-size: 1.5em;
+                color: inherit;
+            }
+            .description {
+                color: $textColor;
+                p {
+                    color: $lightColor;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+
+
+// ----------------------------COMPETENCES---------------------
+    .skills {
+        margin: 0 0;
+        padding: 10px 0;
+        text-align: center;
+        background: $skillsColor;
+        z-index: 1;
+        i {
+            font-size: 40px;
+            line-height: 60px;
+            margin: 20px;
+        }
+        .separator {
+            margin: 50px auto;
+            content: ' ';
+            background-color: $textColor2;
+            height: 2px;
+            width: 25vw;
+        }
+        &:before {
+            display: none;
+            transform: rotate(-2deg);
+            transform-origin: 2% 0;
+            top: 0;
+            left: -50%;
+            z-index: -1;
+            width: 200%;
+            height: 100%;
+            background: inherit;
+            overflow: hidden;
+        }
+        &-soft {
+            .col-m-6, .col-s-12 {
+                text-align: left;
+            }
+            i {
+                font-size: 1.5em;
+                margin: 0 10px;
+                color: $textColor2;
+            }
+        }
+
+        &-language {
+            .col-m-6, .col-s-12 {
+                text-align: left;
+                line-height: 60px;
+            }
+            strong {
+                margin: 0 10px;
+                font-size: 1.3em;
+            }
+        }
+    }
+
+// ------------------------PROJETS-----------------------------
+    .portfolio {
+        text-align: center;
+        padding: 10px;
+        margin: 0 10px;
+        background: $bgColor;
+        z-index: 1;
+        i {
+            font-size: 1.5em;
+            // color: inherit;
+        }
+        .description {
+            text-align: left;
+            color: $textColor;
+            p {
+                color: $lightColor;
+                font-size: 0.8em;
+                i {
+                    font-size: 2em;
+                    vertical-align: middle;
+                }
+            }
+            .wrapper-devicon{
+                position: relative;
+                a {
+                    position: absolute;
+                    color: #E54D26;
+                    padding-left: 5px;
+                }
+            }
+        }
+        &:before {
+            display: none;
+            transform: rotate(-2deg);
+            transform-origin: 2% 0;
+            top: 0;
+            left: -50%;
+            z-index: -1;
+            width: 160%;
+            height: 50%;
+            background: inherit;
+        }
+    }
+
+// ----------------------------GENERIQUE----------------------------
+    .background-diagonal {
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+        }
+    }
+
+    .devicons {
+      &.devicons-npm.colored {
+        color: #CB3837;
+      }
+      &.devicons-composer.colored {
+        color: #3D66B7;
+      }
+    }
+    .wrapper-devicon {
+    margin-top: -20px;
+    }
+
+    .border {
+        border: 5px solid #e0dede;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        margin: 0 auto 10px;
+        img {
+            max-height: 50px;
+            height: auto;
+            max-width: 50px;
+        }
+        &:hover {
+            border-color: $textColor2;
+        }
+    }
+
+    [tooltip] {
+        cursor: default !important;
+        .tooltip {
+            cursor: default !important;
+            pointer-events: none;
+            opacity: 0;
+            position: absolute;
+            line-height: normal;
+            padding: 10px 0;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1rem;
+            background-color: $skillsColor;
+            height: 50px;
+            min-width: 50px;
+            color: #000;
+            font-family: "PT Sans Caption";
+        }
+        &.active{
+            .tooltip {
+                opacity: 1;
+                transition: all 0.2s ease;
+            }
+        }
+    }
+
+    .v-center {
+        height: 100vh;
+        width: 100%;
+        display: table;
+        position: relative;
+        text-align: center;
+        > div {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            top: -10%;
+        }
+    }
+    .col-m-3, .col-m-4, .col-m-6, .col-s-1, .col-s-12{
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding: 10px;
+    }
+    .col-s-12 {
+        width: 100%;
+    }
+
+    .visible-s {
+        display: block;
+    }
+    .visible-l, .visible-m {
+        display: none;
+    }
+}
+
+
+
+
+// ---------------------js RTHUMBNAIL-------------------
+
+.gallery-item:hover img {
+    -webkit-box-shadow: none;
+}
+.features-hover {
+    display: none ;
+    position: absolute;
+    transform: translateX(-230px) translateY(200px);
+    padding: 8px;
+    background: $bgColor;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
