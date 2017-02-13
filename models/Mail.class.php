@@ -65,12 +65,14 @@ class Mail
 			throw new Exception("Veuillez saisir un sujet",3);
 	}
 	public function setMessage($message) {
-		if (strlen($message) > 50 && strlen($message) < 1023)
+		if (strlen($message) > 50 && strlen($message) < 1023 && strpos($message, '://') == '')
 			$this->message = $message;
 		else if (strlen($message) < 1)
 			throw new Exception("Veuillez saisir un message",4);
 		else if (strlen($message) < 50)
 			throw new Exception("Veuillez saisir un message de plus de 50 caracteres",4);
+		else if ( strpos($message, '://') > 0 )
+			throw new Exception("Veuillez saisir un message sans liens hyper-text",4);
 		else
 			throw new Exception("Veuillez saisir un message de moins de 1000 caracteres",4);
 	}
